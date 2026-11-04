@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "README.md",
+      "index": 5,
+      "source_sha256": "b841a40f37ea00a981c9d19fffb1baad8fd6a0827a2cb646942abf06e4a8afd7",
+      "required_text": [
+        "κ",
+        "ζ",
+        "sin",
+        "8",
+        "cos"
+      ]
+    },
+    {
+      "path": "README.md",
+      "index": 6,
+      "source_sha256": "41320f9549b4e8dc9f47af49d10d148aa267922e11f7505a834c0916edb6d35a",
+      "required_text": [
+        "643",
+        "450",
+        "κ",
+        "L",
+        "−2"
+      ]
+    },
+    {
+      "path": "science/instability-theorem.md",
+      "index": 36,
+      "source_sha256": "4040778d7de1d1a760d095bba6672a3a199b97593de82134d21ef450748111ad",
+      "required_text": [
+        "(T9)",
+        "643",
+        "450",
+        "κ",
+        "−2"
+      ]
+    },
+    {
+      "path": "science/instability-theorem.md",
+      "index": 100,
+      "source_sha256": "7d0280ef84bf241fbbd7fa7c4ca85b1225355a20092acd3703dde07115f5d935",
+      "required_text": [
+        "(T24)",
+        "11",
+        "18",
+        "184",
+        "225",
+        "643",
+        "450"
+      ]
+    },
+    {
+      "path": "science/instability-theorem.md",
+      "index": 117,
+      "source_sha256": "67e45718190e1c72a02a8f929907f5f15c18b3cb360d85e4e3874d582f9906c3",
+      "required_text": [
+        "(T27)",
+        "11",
+        "144",
+        "ζ",
+        "sin",
+        "cos",
+        "−2"
+      ]
+    },
+    {
+      "path": "science/instability-theorem.md",
+      "index": 118,
+      "source_sha256": "cc4f64ac79644e5bf0e725efa317794beaa6b47afb9db2689116faa796627fdd",
+      "required_text": [
+        "(T28)",
+        "643",
+        "3600",
+        "ζ",
+        "sin",
+        "cos",
+        "−2"
+      ]
+    },
+    {
+      "path": "data/README.md",
+      "index": 31,
+      "source_sha256": "c99d20acb05ad643653730605a017dfd879f4c429ded96493d7dc4a82d83031e",
+      "required_text": [
+        "X",
+        "01",
+        "=",
+        "−",
+        "sin",
+        "ε"
+      ]
+    },
+    {
+      "path": "data/README.md",
+      "index": 32,
+      "source_sha256": "97e232caf37f1610a734607668f42c9a556a1fc829365d711ff232f87f1d0c85",
+      "required_text": [
+        "X",
+        "1"
+      ]
+    },
+    {
+      "path": "data/README.md",
+      "index": 33,
+      "source_sha256": "cc65d8a6a35225dd739b732a007b2187566b1cf322f0467306a2217d83f8b7d8",
+      "required_text": [
+        "S",
+        "p",
+        "=",
+        "σ",
+        "x",
+        "⊗",
+        "orbital"
+      ]
+    }
+  ]
+}

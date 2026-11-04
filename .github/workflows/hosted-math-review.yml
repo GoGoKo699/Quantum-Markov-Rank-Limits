@@ -1,0 +1,86 @@
+name: Read-only hosted mathematics review
+
+on:
+  push:
+    branches: [review/hosted-math-20261104]
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    if: ${{ github.repository == 'GoGoKo699/Quantum-Markov-Rank-Limits' && !github.event.deleted }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      SOURCE_REVISION: 4648092060be081940a439496e6cb295ecdf4a8f
+      NODE_PATH: ${{ runner.temp }}/hosted-deps/node_modules
+      PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/hosted-browsers
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Read the review harness from this push
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          path: harness
+          sparse-checkout: review-tools
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Read the exact scientific source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ env.SOURCE_REVISION }}
+          path: source
+          persist-credentials: false
+          fetch-depth: 1
+
+      - name: Verify canonical helper bytes
+        working-directory: harness/review-tools
+        run: |
+          sha256sum --check SHA256SUMS
+          cp SHA256SUMS "$RUNNER_TEMP/hosted-helper-SHA256SUMS"
+
+      - name: Install the documented capture dependencies
+        run: |
+          set -euo pipefail
+          node --version
+          python3 --version
+          git --version
+          npm install --prefix "$RUNNER_TEMP/hosted-deps" --no-audit --no-fund --save-exact playwright@1.56.1 mathjax-full@3.2.1
+          "$RUNNER_TEMP/hosted-deps/node_modules/.bin/playwright" install --with-deps chromium
+
+      - name: Capture every tracked Markdown page at the pinned revision
+        run: |
+          set -euo pipefail
+          [[ "$SOURCE_REVISION" =~ ^[0-9a-f]{40}$ ]]
+          test "$(git -C source rev-parse HEAD)" = "$SOURCE_REVISION"
+          timeout 20m node "$GITHUB_WORKSPACE/harness/review-tools/capture_hosted_math.cjs" \
+            --root "$GITHUB_WORKSPACE/source" \
+            --repository GoGoKo699/Quantum-Markov-Rank-Limits \
+            --revision "$SOURCE_REVISION" \
+            --python python3 \
+            --contract "$GITHUB_WORKSPACE/harness/review-tools/math-contract.json" \
+            --output "$RUNNER_TEMP/hosted-evidence" \
+            2>&1 | tee "$RUNNER_TEMP/hosted-capture.log"
+
+      - name: Verify source checkout stayed unchanged
+        if: ${{ always() }}
+        run: |
+          test "$(git -C source rev-parse HEAD)" = "$SOURCE_REVISION"
+          test -z "$(git -C source status --porcelain=v1)"
+
+      - name: Retain successful or failed capture evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: hosted-math-${{ env.SOURCE_REVISION }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/hosted-evidence/
+            ${{ runner.temp }}/hosted-capture.log
+            ${{ runner.temp }}/hosted-deps/package-lock.json
+            ${{ runner.temp }}/hosted-helper-SHA256SUMS
+          retention-days: 14
+          if-no-files-found: error
