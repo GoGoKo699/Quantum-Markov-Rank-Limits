@@ -17,7 +17,7 @@ sites. Each such gate obeys
 
 \|\widetilde{\mathcal G}_{j,\epsilon}-\mathrm{id}\|_\diamond
 \le 8\sin^2(\epsilon/2)\le 8\epsilon^2.
-\tag{S1}
+\qquad\text{(S1)}
 ```
 
 The output has infinite Markov length in the two-sided shielding geometry.
@@ -26,12 +26,16 @@ $`C_L,B_L,A,B_R,C_R`$, each of length $`n`$, its shielded CMI obeys
 
 ```math
 
+\begin{gathered}
 I_{\sigma_\epsilon}(A:C_LC_R\mid B_LB_R)
 =\frac{643}{450}\,\kappa_\epsilon n^{-2}+o(n^{-2}),
-\qquad
-\kappa_\epsilon=\gamma_\epsilon\zeta(3),\quad
+\\
+
+\kappa_\epsilon=\gamma_\epsilon\zeta(3),\\
+
 \gamma_\epsilon=\frac{\sin^2\epsilon}{8(1+\cos^2\epsilon)}.
-\tag{S2}
+\end{gathered}
+\qquad\text{(S2)}
 ```
 
 The derivation below separates the strictly local spin construction, the
@@ -70,7 +74,7 @@ algebra is
 ```math
 
 \mathfrak E(r)=2^{-N_{\rm p}}r(c,c^\dagger).
-\tag{S3}
+\qquad\text{(S3)}
 ```
 
 This is the physical state with tracial auxiliary modes. Reordering all
@@ -92,9 +96,13 @@ For one orbital flavor on a fine bond, define
 
 ```math
 
-s_{j,a}=\frac{c_{j,a}+c_{j+1,a}}{\sqrt2},\qquad
-\Gamma^x_{j,a}=s_{j,a}+s_{j,a}^\dagger,\qquad
+\begin{gathered}
+s_{j,a}=\frac{c_{j,a}+c_{j+1,a}}{\sqrt2},\\
+
+\Gamma^x_{j,a}=s_{j,a}+s_{j,a}^\dagger,\\
+
 \Gamma^y_{j,a}=i(s_{j,a}^\dagger-s_{j,a}).
+\end{gathered}
 ```
 
 Both $`\Gamma^x,\Gamma^y`$ are odd Hermitian unitaries. With
@@ -106,7 +114,7 @@ operators with the following map [1, Proposition 7]:
 \mathcal E_{j,a}
 =\bigl[(1-p)\mathrm{id}+p\,\mathrm{Ad}_{\Gamma^y_{j,a}}\bigr]
  \bigl[(1-p)\mathrm{id}+p\,\mathrm{Ad}_{\Gamma^x_{j,a}}\bigr].
-\tag{S4}
+\qquad\text{(S4)}
 ```
 
 Replace each odd unitary by
@@ -116,7 +124,7 @@ Replace each odd unitary by
 \widetilde\Gamma^\alpha_{j,a}
 =i\eta_{j,a}\Gamma^\alpha_{j,a},
 \qquad \alpha=x,y.
-\tag{S5}
+\qquad\text{(S5)}
 ```
 
 These operators are even, Hermitian, and square to $`I`$. If $`r`$ is an
@@ -128,7 +136,7 @@ anticommutes with $`\Gamma^\alpha_{j,a}`$. Therefore
 \widetilde\Gamma^\alpha_{j,a}\,
 \mathfrak E(r)\,\widetilde\Gamma^\alpha_{j,a}
 =\mathfrak E(\Gamma^\alpha_{j,a}r\Gamma^\alpha_{j,a}).
-\tag{S6}
+\qquad\text{(S6)}
 ```
 
 Replacing the conjugations in (S4) by these even conjugations consequently
@@ -138,7 +146,7 @@ gives an exact channel lift:
 
 \widetilde{\mathcal E}_{j,a}\circ\mathfrak E
 =\mathfrak E\circ\mathcal E_{j,a}.
-\tag{S7}
+\qquad\text{(S7)}
 ```
 
 The output remains an even physical polynomial with tracial auxiliaries,
@@ -161,7 +169,7 @@ $`(1-p)^2`$, yielding
 
 \|\widetilde{\mathcal E}_{j,a}-\mathrm{id}\|_\diamond
 \le2[1-(1-p)^2]\le4p.
-\tag{S8}
+\qquad\text{(S8)}
 ```
 
 Compose the two orbital gates into
@@ -197,7 +205,7 @@ $`c=(\mu^x+i\mu^y)/2`$, the lifted operators are
 &=\frac{X_rX_{r+1}
  +Y_{r+1}Z_{r+2}Z_{r+3}Y_{r+4}}{\sqrt2}.
 \end{aligned}
-\tag{S9}
+\qquad\text{(S9)}
 ```
 
 Within each line the two Pauli terms anticommute, so the normalized sum
@@ -218,9 +226,13 @@ has parity/subcell and orbital tensor factors. Let
 
 ```math
 
+\begin{gathered}
 P_m(k)=\frac12
 \begin{pmatrix}1&-f_m(k)\\-\overline{f_m(k)}&1\end{pmatrix},
-\qquad f_m(k)=\frac{m+e^{ik}}{|m+e^{ik}|},\qquad m>1.
+\\
+ f_m(k)=\frac{m+e^{ik}}{|m+e^{ik}|},\\
+ m>1.
+\end{gathered}
 ```
 
 The physical input is the pure Gaussian state with covariance
@@ -236,13 +248,17 @@ f_m(z)^2=\frac{z(m+z)}{mz+1}
 has odd-order zeros and poles. This argument applies to either parity
 chain and hence to their product.
 
-Choose the fixed projector $`P_0=\operatorname{diag}(1,0)`$, and set
+Choose the fixed projector $`P_0=\mathrm{diag}(1,0)`$, and set
 
 ```math
 
+\begin{gathered}
 W=\frac1{\sqrt2}\begin{pmatrix}-1&1\\1&1\end{pmatrix},
-\quad D_m(k)=\operatorname{diag}(f_m(k),1),
-\quad U_m(k)=D_m(k)W.
+\\
+ D_m(k)=\mathrm{diag}(f_m(k),1),
+\\
+ U_m(k)=D_m(k)W.
+\end{gathered}
 ```
 
 Then $`P_m=U_mP_0U_m^\dagger`$. The undressed physical state has orbital
@@ -270,7 +286,7 @@ orbital-isotropic layers give
 
 C_{\rm out}
 =C_{\rm NL}\otimes(I-P_m)+(I-C_{\rm NL})\otimes P_m.
-\tag{S10}
+\qquad\text{(S10)}
 ```
 
 Thus the dressed and undressed physical Gaussian outputs are related by
@@ -282,7 +298,7 @@ embedding with even physical unitaries imply the spin-state identity
 \sigma_\epsilon
 \equiv\widetilde\Phi_\epsilon(\sigma_0)
 =\mathcal U_m(\tau_\epsilon).
-\tag{S11}
+\qquad\text{(S11)}
 ```
 
 This does not assert that the lifted channel commutes with
@@ -298,7 +314,7 @@ analytic logarithm. Explicitly,
 
 \theta_m(k)
 =\sum_{r\ge1}\frac{(-1)^{r+1}}{r\,m^r}\sin(rk).
-\tag{S12}
+\qquad\text{(S12)}
 ```
 
 The diagonal unitary $`D_m`$ is generated in fixed time by physical
@@ -321,10 +337,10 @@ Jordan--Wigner string to the left of $`R`$. The reduced spin spectrum is
 
 ```math
 
-\operatorname{spec}(\sigma_R)
+\mathrm{spec}(\sigma_R)
 =\left\{2^{-N_{\rm p}(R)}\lambda:
-\lambda\in\operatorname{spec}(\rho^{\rm phys}_R)\right\},
-\tag{S13}
+\lambda\in\mathrm{spec}(\rho^{\rm phys}_R)\right\},
+\qquad\text{(S13)}
 ```
 
 with each eigenvalue repeated $`2^{N_{\rm p}(R)}`$ times. One way to see
@@ -335,7 +351,7 @@ interval* and use (S3). This also gives
 
 S_{\rm spin}(R)
 =S_{\rm phys}(R)+N_{\rm p}(R)\log2.
-\tag{S14}
+\qquad\text{(S14)}
 ```
 
 Since every finite physical input density operator is positive definite,
@@ -381,7 +397,7 @@ resulting sets by $`A',B',C'`$. Then for every global state $`\rho`$,
 
 I_{V\rho V^\dagger}(A:C\mid B)
 \le I_\rho(A':C'\mid B').
-\tag{S15}
+\qquad\text{(S15)}
 ```
 
 The proof does not require connected registers. Adding exterior
@@ -391,7 +407,7 @@ the buffer into the endpoints uses
 ```math
 
 I(A:C\mid aB'c)\le I(Aa:Cc\mid B').
-\tag{S16}
+\qquad\text{(S16)}
 ```
 
 The difference is a sum of nonnegative CMIs by the chain rule. The
@@ -410,7 +426,7 @@ $`O(\ell)`$, such that on a window $`R`$
 \tfrac12\|[\mathcal U_m(\rho)]_R
  -(V_\ell\rho V_\ell^\dagger)_R\|_1
 \le C(|R|+\ell)e^{-c\ell}.
-\tag{S17}
+\qquad\text{(S17)}
 ```
 
 The same bound holds for the inverse dressing and uniformly over
@@ -427,11 +443,14 @@ entropy continuity bound [5] applied twice gives
 
 ```math
 
+\begin{gathered}
 |I_\rho(A:C\mid B)-I_\omega(A:C\mid B)|
 \le4\delta\log d_{\min}+2g(\delta),
-\quad
+\\
+
 g(\delta)=(1+\delta)h_2\!\left(\frac{\delta}{1+\delta}\right).
-\tag{S18}
+\end{gathered}
+\qquad\text{(S18)}
 ```
 
 Here $`d_{\min}=\min(\dim A,\dim C)`$, and logarithms are natural.
@@ -445,10 +464,13 @@ such that
 
 ```math
 
+\begin{gathered}
 I_{\sigma_0}(A:C\mid B)
 \le C(1+|A|)(1+|B|)^q e^{-a b},
-\qquad b=\min(|B_L|,|B_R|).
-\tag{S18a}
+\\
+ b=\min(|B_L|,|B_R|).
+\end{gathered}
+\qquad\text{(S18a)}
 ```
 
 The proof permits mixed product input and is uniform in the finite
@@ -473,11 +495,14 @@ circuit range. Then
 
 ```math
 
+\begin{gathered}
 (\tau_\epsilon)_{B_LB_RC_R}
 =(\tau_\epsilon)_{B_L}\otimes
   (\tau_\epsilon)_{B_RC_R},
-\qquad I_{\tau_\epsilon}(B_L:C_R\mid B_R)=0.
-\tag{S19}
+\\
+ I_{\tau_\epsilon}(B_L:C_R\mid B_R)=0.
+\end{gathered}
+\qquad\text{(S19)}
 ```
 
 The chain rule and nonnegativity now give
@@ -489,7 +514,7 @@ I_{\tau_\epsilon}(A:C_LC_R\mid B_LB_R)
 &\ge I_{\tau_\epsilon}(A:C_R\mid B_LB_R)\\
 &=I_{\tau_\epsilon}(AB_L:C_R\mid B_R).
 \end{aligned}
-\tag{S20}
+\qquad\text{(S20)}
 ```
 
 The last CMI uses four *contiguous* intervals, of lengths $`3n,2n,n,4n`$.
@@ -499,7 +524,7 @@ vacuum-output chain, then in complete coarse cells
 ```math
 
 S_{\tau_\epsilon}(L)=2S_{\rm NL}(L)+4L\log2.
-\tag{S21}
+\qquad\text{(S21)}
 ```
 
 The first term contains the independent empty and filled orbital
@@ -513,7 +538,7 @@ Using the inherited interval asymptotic [1, Eq. (15), Appendix E]
 S_{\rm NL}(L)
 =sL+s_0-\frac{\gamma_\epsilon\zeta(3)}{2L^2}
  +O(L^{-3}),
-\tag{S22}
+\qquad\text{(S22)}
 ```
 
 equation (S20) yields
@@ -523,7 +548,7 @@ equation (S20) yields
 I_{\tau_\epsilon}(A:C_LC_R\mid B_LB_R)
 \ge \frac{101}{144}\,\kappa_\epsilon n^{-2}
  +O(n^{-3}).
-\tag{S23}
+\qquad\text{(S23)}
 ```
 
 Indeed, the geometric coefficient is
@@ -548,11 +573,13 @@ Consequently,
 
 ```math
 
-I_{\sigma_\epsilon}(an:cn\mid bn)
-=\kappa_\epsilon
+\begin{aligned}
+&I_{\sigma_\epsilon}(an:cn\mid bn)\\
+&=\kappa_\epsilon
 \left[b^{-2}+(a+b+c)^{-2}-(a+b)^{-2}-(b+c)^{-2}\right]n^{-2}
  +o(n^{-2}).
-\tag{S24}
+\end{aligned}
+\qquad\text{(S24)}
 ```
 
 Second, ordinary mutual information of separated macroscopic intervals
@@ -572,12 +599,12 @@ a contiguous $`kn`$-cell interval. Exact spin entropy identities give
 ```math
 
 \begin{aligned}
-I_{\sigma_\epsilon}(A:C_LC_R\mid B_LB_R)
-={}&S_\sigma(3n)+2S_\sigma(2n)-2S_\sigma(n)-S_\sigma(5n)\\
-&+I_{\sigma_\epsilon}(B_L:B_R)
+&I_{\sigma_\epsilon}(A:C_LC_R\mid B_LB_R)\\
+&={}S_\sigma(3n)+2S_\sigma(2n)-2S_\sigma(n)-S_\sigma(5n)\\
+&\quad+I_{\sigma_\epsilon}(B_L:B_R)
  -I_{\sigma_\epsilon}(C_LB_L:B_RC_R).
 \end{aligned}
-\tag{S25}
+\qquad\text{(S25)}
 ```
 
 Both ordinary MI terms have separation $`n`$, so they are exponentially

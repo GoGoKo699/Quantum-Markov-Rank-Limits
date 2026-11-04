@@ -32,9 +32,10 @@ Let $`\rho`$ and $`\sigma`$ be states on a finite tripartition and set
 
 ```math
 
-\epsilon=\tfrac12\|\rho_{ABC}-\sigma_{ABC}\|_1\leq 1,
-\qquad
- g(\epsilon)=(1+\epsilon)h_2\!\left(\frac{\epsilon}{1+\epsilon}\right),
+\begin{aligned}
+\epsilon&=\tfrac12\|\rho_{ABC}-\sigma_{ABC}\|_1\leq 1,\\
+g(\epsilon)&=(1+\epsilon)h_2\!\left(\frac{\epsilon}{1+\epsilon}\right),
+\end{aligned}
 ```
 
 where $`h_2(x)=-x\log x-(1-x)\log(1-x)`$. Applying [Winter's conditional-entropy bound](../references/README.md#continuity), Lemma 2, to
@@ -48,9 +49,11 @@ gives
 
 ```math
 
-\big|I_\rho(A:C\mid B)-I_\sigma(A:C\mid B)\big|
-\leq 4\epsilon\log d_A+2g(\epsilon).
-\tag{1}
+\begin{aligned}
+&\big|I_\rho(A:C\mid B)-I_\sigma(A:C\mid B)\big|\\
+&\qquad\leq 4\epsilon\log d_A+2g(\epsilon).
+\end{aligned}
+\qquad\text{(1)}
 ```
 
 One may replace $`d_A`$ by $`\min(d_A,d_C)`$. In particular, the bound using $`d_A`$ is independent of the dimension of the exterior $`C`$. No lower bound on an eigenvalue of $`\rho`$ or $`\sigma`$ is required. We will use both $`g(\epsilon)=O(\epsilon\log(1/\epsilon))`$ as $`\epsilon\downarrow0`$ and the uniform bound $`g(\epsilon)\leq C\sqrt\epsilon`$ on $`[0,1]`$.
@@ -63,22 +66,22 @@ For a quadratic generator with a fixed number $`q`$ of modes per cell, assume
 
 ```math
 
-K=\sum_{x,y}\sum_{\alpha,\beta=1}^{q}
- k_{x\alpha,y\beta}c^\dagger_{x\alpha}c_{y\beta},
-\qquad
- |k_{x\alpha,y\beta}|\leq J e^{-\mu|x-y|},
-\tag{2}
+\begin{aligned}
+K&=\sum_{x,y}\sum_{\alpha,\beta=1}^{q} k_{x\alpha,y\beta}c^\dagger_{x\alpha}c_{y\beta},\\
+|k_{x\alpha,y\beta}|&\leq J e^{-\mu|x-y|},
+\end{aligned}
+\qquad\text{(2)}
 ```
 
 with $`k=k^\dagger`$. Evolution time is bounded by a fixed $`T`$. In the spatial Jordan–Wigner representation, each hopping term has interval support between its two endpoints and the same operator norm, up to a fixed convention-dependent constant. For any $`0<\nu<\mu`$, the resulting interval interaction $`\Phi`$ satisfies
 
 ```math
 
-\|\Phi\|_{F_\nu}
-:=\sup_{x,y}\frac{\sum_{Z\ni x,y}\|\Phi(Z)\|}{F_\nu(|x-y|)}<\infty,
-\qquad
-F_\nu(r)=\frac{e^{-\nu r}}{(1+r)^2}.
-\tag{3}
+\begin{aligned}
+\|\Phi\|_{F_\nu}&:=\sup_{x,y}\frac{\sum_{Z\ni x,y}\|\Phi(Z)\|}{F_\nu(|x-y|)}<\infty,\\
+F_\nu(r)&=\frac{e^{-\nu r}}{(1+r)^2}.
+\end{aligned}
+\qquad\text{(3)}
 ```
 
 Indeed, the sum of hopping norms over intervals containing both $`x`$ and $`y`$ is bounded by $`C e^{-\mu|x-y|}`$, and the slower exponential in $`F_\nu`$ absorbs the polynomial denominator. The function $`F_\nu`$ is summable and has a finite convolution constant. The Lieb–Robinson estimate and thermodynamic-limit construction therefore apply; see [Nachtergaele–Ogata–Sims, Theorems 2.1 and 2.2](../references/README.md#local-dynamics).
@@ -89,9 +92,11 @@ For a finite interval $`R`$ and a larger interval $`W`$, the locality estimate h
 
 ```math
 
-\left\|\alpha_t(O_R)-\alpha_t^{W}(O_R)\right\|
-\leq C_T|R|e^{-a\,\operatorname{dist}(R,W^c)}\|O_R\|.
-\tag{4}
+\begin{aligned}
+&\left\|\alpha_t(O_R)-\alpha_t^{W}(O_R)\right\|\\
+&\qquad\leq C_T|R|e^{-a\,\mathrm{dist}(R,W^c)}\|O_R\|.
+\end{aligned}
+\qquad\text{(4)}
 ```
 
 It is uniform in the state. Taking the supremum over norm-one observables yields the corresponding reduced-state trace-distance bound, including for inputs correlated with the exterior. For even fermionic state differences, it suffices to take even observables in this dual characterization.
@@ -109,9 +114,11 @@ For any finite exterior $`C\subset(AB)^c`$, there are constants $`C_0,a_0>0`$ an
 
 ```math
 
+\begin{aligned}
 I_\rho(A:C\mid B)
 \leq C_0(1+|A|)(1+|B|)^p e^{-a_0 b}.
-\tag{5}
+\end{aligned}
+\qquad\text{(5)}
 ```
 
 The constants and polynomial are independent of $`|C|`$. The same bound holds for the increasing-exterior limit of the CMI.
@@ -122,13 +129,12 @@ Work first in an arbitrary finite interval $`\Lambda\supset AB`$ and take the fu
 
 ```math
 
-U_\Lambda\approx \widetilde U_\Lambda
-=U_B\big(U_{A_+}U_{C_+}\big)^\dagger
- U_{AA_+}U_{C_\Lambda C_+},
-\qquad
-\|U_\Lambda-\widetilde U_\Lambda\|
-\leq C_T(1+|B|)^{p_0}e^{-a b}.
-\tag{6}
+\begin{aligned}
+U_\Lambda&\approx \widetilde U_\Lambda\\
+&=U_B\big(U_{A_+}U_{C_+}\big)^\dagger U_{AA_+}U_{C_\Lambda C_+},\\
+\|U_\Lambda-\widetilde U_\Lambda\|&\leq C_T(1+|B|)^{p_0}e^{-a b}.
+\end{aligned}
+\qquad\text{(6)}
 ```
 
 The block Hamiltonians are restrictions of the interval interaction. A disconnected block can have more than one component. The error is uniform in $`\Lambda`$, $`|A|`$, and $`|C_\Lambda|`$.
@@ -137,11 +143,13 @@ For clarity, the exponential assertion in (6) uses the displayed error functions
 
 ```math
 
+\begin{aligned}
 2|B||t|f^\delta(b/3)+2|B|^2|t|F_t(b/6).
-\tag{7}
+\end{aligned}
+\qquad\text{(7)}
 ```
 
-Our generator admits a site-centered decomposition whose locality tail is $`f(r)\leq C e^{-\mu_0 r}`$. In Eqs. (III.5)–(III.11), $`f^\delta`$ and $`f^\partial`$ are polynomially weighted tails of $`f`$. Choose the reproducing function $`h(r)=C'e^{-\mu_0\alpha r/2}(1+r)^{-\eta}`$ with $`0<\alpha<1`$ and $`\eta>1`$. In the inner sum defining $`\widetilde f_t(r)`$, when $`m\leq\operatorname{dist}(j,k)/2`$ and $`x\in B_m(j)`$, one has $`\operatorname{dist}(x,k)\geq\operatorname{dist}(j,k)/2`$. This supplies an exponential bound for that part; the part with larger $`m`$ is a tail of $`f`$. The remaining sums in $`\widetilde f_t`$ and $`F_t`$ are again polynomially weighted exponential tails. Reducing the exponent if necessary, all these functions are bounded by $`C_T e^{-a' r}`$. This proves (6), with some fixed polynomial in $`|B|`$, uniformly in the exterior volume.
+Our generator admits a site-centered decomposition whose locality tail is $`f(r)\leq C e^{-\mu_0 r}`$. In Eqs. (III.5)–(III.11), $`f^\delta`$ and $`f^\partial`$ are polynomially weighted tails of $`f`$. Choose the reproducing function $`h(r)=C'e^{-\mu_0\alpha r/2}(1+r)^{-\eta}`$ with $`0<\alpha<1`$ and $`\eta>1`$. In the inner sum defining $`\widetilde f_t(r)`$, when $`m\leq\mathrm{dist}(j,k)/2`$ and $`x\in B_m(j)`$, one has $`\mathrm{dist}(x,k)\geq\mathrm{dist}(j,k)/2`$. This supplies an exponential bound for that part; the part with larger $`m`$ is a tail of $`f`$. The remaining sums in $`\widetilde f_t`$ and $`F_t`$ are again polynomially weighted exponential tails. Reducing the exponent if necessary, all these functions are bounded by $`C_T e^{-a' r}`$. This proves (6), with some fixed polynomial in $`|B|`$, uniformly in the exterior volume.
 
 Now apply $`\widetilde U_\Lambda`$ to the product state. The two rightmost unitaries act on disjoint regions $`AA_+`$ and $`C_\Lambda C_+`$, while the remaining sites are still in a product state. The resulting state has zero $`I(A:C_\Lambda\mid B)`$. The remaining factors in $`\widetilde U_\Lambda`$ are supported entirely in $`B`$, so they preserve this zero CMI. This argument works for mixed as well as pure product input.
 
@@ -149,9 +157,10 @@ Operator-norm closeness of two unitaries gives
 
 ```math
 
-\tfrac12\|U_\Lambda\rho_{0,\Lambda}U_\Lambda^\dagger
- -\widetilde U_\Lambda\rho_{0,\Lambda}\widetilde U_\Lambda^\dagger\|_1
-\leq \|U_\Lambda-\widetilde U_\Lambda\|.
+\begin{aligned}
+&\tfrac12\|U_\Lambda\rho_{0,\Lambda}U_\Lambda^\dagger -\widetilde U_\Lambda\rho_{0,\Lambda}\widetilde U_\Lambda^\dagger\|_1\\
+&\qquad\leq \|U_\Lambda-\widetilde U_\Lambda\|.
+\end{aligned}
 ```
 
 Use (1) with $`\log d_A=|A|\log d`$. If the right side of (6) is at most one, $`g(\epsilon)\leq C\sqrt\epsilon`$ gives (5), with a smaller positive exponential rate. If it exceeds one, the dimension bound $`I(A:C\mid B)\leq2|A|\log d`$ gives the same result after increasing the constant.
@@ -182,9 +191,11 @@ and the generator is $`K(k)=-\theta_m(k)\sigma_z/2`$, independently on the two p
 
 ```math
 
+\begin{aligned}
 I_{V\rho V^\dagger}(A:C\mid B)
 \leq I_\rho(A':C'\mid B').
-\tag{8}
+\end{aligned}
+\qquad\text{(8)}
 ```
 
 Each endpoint boundary moves by at most $`Dr`$; each connected buffer loses at most $`2Dr`$ cells. Outer endpoint boundaries may move into the exterior of the original observation interval. The statement holds for an arbitrary correlated input state.
@@ -196,11 +207,11 @@ For one layer, enlarge each endpoint to the complete gate blocks touching it. Si
 ```math
 
 \begin{aligned}
-I(Aa:Cc\mid B_0)
-={}&I(a:c\mid B_0)+I(A:c\mid B_0a)\\
- &+I(a:C\mid B_0c)+I(A:C\mid B_0ac),
+&I(Aa:Cc\mid B_0)\\
+&\qquad=I(a:c\mid B_0)+I(A:c\mid B_0a)\\
+&\qquad\quad+I(a:C\mid B_0c)+I(A:C\mid B_0ac),
 \end{aligned}
-\tag{9}
+\qquad\text{(9)}
 ```
 
 so that $`I(A:C\mid B_0ac)\leq I(Aa:Cc\mid B_0)`$. All the omitted terms are nonnegative by strong subadditivity. The registers $`a,c,B_0`$ may each have several components; connectedness is not an entropy assumption.
@@ -215,9 +226,11 @@ The enlargement must follow complete gate blocks. An arbitrary fixed neighborhoo
 
 ```math
 
-\tfrac12\|[\mathcal U(\rho)]_R-[V_{R,\ell}\rho V_{R,\ell}^\dagger]_R\|_1
-\leq C_T(N+\ell)e^{-a\ell}.
-\tag{10}
+\begin{aligned}
+&\tfrac12\|[\mathcal U(\rho)]_R-[V_{R,\ell}\rho V_{R,\ell}^\dagger]_R\|_1\\
+&\qquad\leq C_T(N+\ell)e^{-a\ell}.
+\end{aligned}
+\qquad\text{(10)}
 ```
 
 For fermions the input is even and the gates can be chosen even. The inverse automorphism has the same property.
@@ -242,20 +255,22 @@ For the quadratic interaction, the cross-cut tail bound used in this proof follo
 
 ```math
 
+\begin{aligned}
 S_\tau(n)=s n+s_0-\frac{\kappa}{n^2}+O(n^{-3}).
-\tag{11}
+\end{aligned}
+\qquad\text{(11)}
 ```
 
 For fixed positive $`a,b,c`$, take consecutive intervals of lengths $`a_L=aL+O(1)`$, $`b_L=bL+O(1)`$, $`c_L=cL+O(1)`$, with integer lengths and coarse-cell-aligned boundaries. Then
 
 ```math
 
-I_\sigma(A_L:C_L\mid B_L)
-=\frac{\kappa}{L^2}
-\left[\frac1{b^2}+\frac1{(a+b+c)^2}
--\frac1{(a+b)^2}-\frac1{(b+c)^2}\right]
-+O\!\left(\frac{\log L}{L^3}\right).
-\tag{12}
+\begin{aligned}
+&I_\sigma(A_L:C_L\mid B_L)\\
+&\quad=\frac{\kappa}{L^2}\left[\frac1{b^2}+\frac1{(a+b+c)^2}-\frac1{(a+b)^2}-\frac1{(b+c)^2}\right]\\
+&\qquad+O\!\left(\frac{\log L}{L^3}\right).
+\end{aligned}
+\qquad\text{(12)}
 ```
 
 The conclusion concerns the CMI coefficient. It does not assert that each individual entropy correction is invariant under the dressing.
@@ -266,23 +281,26 @@ Write the original half-open intervals as
 
 ```math
 
-A=[0,a_L),\quad B=[a_L,a_L+b_L),\quad
-C=[a_L+b_L,a_L+b_L+c_L).
+\begin{aligned}
+A&=[0,a_L),\\
+B&=[a_L,a_L+b_L),\\
+C&=[a_L+b_L,a_L+b_L+c_L).
+\end{aligned}
 ```
 
 Choose $`\ell_L=C\log L`$ in Lemma 3, with $`C`$ large enough that the local trace error is $`O(L^{-8})`$, and choose an integer $`R_L=O(\log L)`$ at least as large as the total circuit boundary growth $`D r`$. For sufficiently large $`L`$, define
 
 ```math
 
-\begin{array}{lll}
- A^+=[-R_L,a_L+R_L),&
- B^-=[a_L+R_L,a_L+b_L-R_L),&
- C^+=[a_L+b_L-R_L,a_L+b_L+c_L+R_L),\$$2mm]
- A^-=[R_L,a_L-R_L),&
- B^+=[a_L-R_L,a_L+b_L+R_L),&
- C^-=[a_L+b_L+R_L,a_L+b_L+c_L-R_L).
-\end{array}
-\tag{13}
+\begin{aligned}
+A^+&=[-R_L,a_L+R_L),\\
+B^-&=[a_L+R_L,a_L+b_L-R_L),\\
+C^+&=[a_L+b_L-R_L,a_L+b_L+c_L+R_L),\\
+A^-&=[R_L,a_L-R_L),\\
+B^+&=[a_L-R_L,a_L+b_L+R_L),\\
+C^-&=[a_L+b_L+R_L,a_L+b_L+c_L-R_L).
+\end{aligned}
+\qquad\text{(13)}
 ```
 
 Lemma 2, followed if needed by further endpoint enlargement, bounds the output CMI above by the reference CMI on $`(A^+,B^-,C^+)`$. For the reverse bound, approximate $`\mathcal U^{-1}`$ on the contracted reference triple $`(A^-,B^+,C^-)`$. Its circuit enlargement remains inside the original endpoints $`A,C`$, and its remaining buffer contains $`B`$. Applying (9) and endpoint monotonicity bounds its CMI by that of the original output triple. The continuity error in each direction is
@@ -296,10 +314,12 @@ Therefore
 
 ```math
 
-I_\tau(A^-:C^-\mid B^+)-\delta_L
-\leq I_\sigma(A:C\mid B)
-\leq I_\tau(A^+:C^+\mid B^-)+\delta_L.
-\tag{14}
+\begin{aligned}
+&I_\tau(A^-:C^-\mid B^+)-\delta_L\\
+&\qquad\leq I_\sigma(A:C\mid B)\\
+&\qquad\leq I_\tau(A^+:C^+\mid B^-)+\delta_L.
+\end{aligned}
+\qquad\text{(14)}
 ```
 
 Both the inner and outer sides of each endpoint have been contracted in the lower comparison. Contracting only the sides adjacent to $`B`$ would not control the inverse circuit's coupling to the exterior.
@@ -309,14 +329,14 @@ For the deterministic triples in (13), the two union lengths $`|AB|=a_L+b_L`$ an
 ```math
 
 \begin{aligned}
-I_\tau(A^+:C^+\mid B^-)
- &=S_\tau(a_L+b_L)+S_\tau(b_L+c_L)
-   -S_\tau(b_L-2R_L)-S_\tau(a_L+b_L+c_L+2R_L),\\
-I_\tau(A^-:C^-\mid B^+)
- &=S_\tau(a_L+b_L)+S_\tau(b_L+c_L)
-   -S_\tau(b_L+2R_L)-S_\tau(a_L+b_L+c_L-2R_L).
+&I_\tau(A^+:C^+\mid B^-)\\
+&\quad=S_\tau(a_L+b_L)+S_\tau(b_L+c_L)\\
+&\qquad-S_\tau(b_L-2R_L)-S_\tau(a_L+b_L+c_L+2R_L),\\
+&I_\tau(A^-:C^-\mid B^+)\\
+&\quad=S_\tau(a_L+b_L)+S_\tau(b_L+c_L)\\
+&\qquad-S_\tau(b_L+2R_L)-S_\tau(a_L+b_L+c_L-2R_L).
 \end{aligned}
-\tag{15}
+\qquad\text{(15)}
 ```
 
 The volume and constant terms cancel in both lines. Substituting (11) and expanding the inverse squares gives the common leading term in (12); the boundary shifts cost $`O(R_L/L^3)`$. The remainder in (11) is uniform along these shifted lengths because all are bounded below by a fixed positive multiple of $`L`$. This proves (12). $`\square`$
@@ -331,20 +351,22 @@ The proof uses the infinite-chain reference state and its local automorphism. Le
 
 ```math
 
-\kappa=\gamma_\epsilon\zeta(3),
-\qquad
-\gamma_\epsilon=\frac{\sin^2\epsilon}{8(1+\cos^2\epsilon)}.
-\tag{16}
+\begin{aligned}
+\kappa&=\gamma_\epsilon\zeta(3),\\
+\gamma_\epsilon&=\frac{\sin^2\epsilon}{8(1+\cos^2\epsilon)}.
+\end{aligned}
+\qquad\text{(16)}
 ```
 
 For $`a=b=c=1`$, (12) becomes
 
 ```math
 
-I_\sigma(A_L:C_L\mid B_L)
-=\frac{11\gamma_\epsilon\zeta(3)}{18L^2}
-+O\!\left(\frac{\log L}{L^3}\right).
-\tag{17}
+\begin{aligned}
+I_\sigma(A_L:C_L\mid B_L)&=\frac{11\gamma_\epsilon\zeta(3)}{18L^2}\\
+&\quad+O\!\left(\frac{\log L}{L^3}\right).
+\end{aligned}
+\qquad\text{(17)}
 ```
 
 All limits in this statement keep the nonzero noise angle and the SSH parameter fixed. The bounds are not asserted to be uniform in a joint limit $`\epsilon\to0`$ and $`L\to\infty`$.
@@ -357,34 +379,40 @@ The following estimate covers finite regions with several components. It is a st
 
 ```math
 
-G=\begin{pmatrix}G_E&X\\X^\dagger&G_F\end{pmatrix},
-\qquad D=G_E\oplus G_F,
-\qquad N=|E|+|F|,
-\qquad \Delta=\|G-D\|_1=2\|X\|_1.
+\begin{aligned}
+G&=\begin{pmatrix}G_E&X\\X^\dagger&G_F\end{pmatrix},\\
+D&=G_E\oplus G_F,\\
+N&=|E|+|F|,\\
+\Delta&=\|G-D\|_1=2\|X\|_1.
+\end{aligned}
 ```
 
 Then
 
 ```math
 
+\begin{aligned}
 I_\rho(E:F)
 \leq \Delta\log(2N-1)+N h_2(\Delta/N).
-\tag{18}
+\end{aligned}
+\qquad\text{(18)}
 ```
 
 In particular, if the covariance entries obey $`|G_{x\alpha,y\beta}|\leq C e^{-a|x-y|}`$ and $`E,F`$ have a fixed number of interval components, separated by at least $`b`$, then $`\Delta\leq C'e^{-a b}`$. For families with $`N=O(L)`$ and $`b\geq cL>0`$,
 
 ```math
 
-I_\rho(E:F)=O(\operatorname{poly}(L)e^{-a' L})
-\tag{19}
+\begin{aligned}
+I_\rho(E:F)=O(\mathrm{poly}(L)e^{-a' L})
+\end{aligned}
+\qquad\text{(19)}
 ```
 
 for some $`a'>0`$, without a lower spectral bound for $`G`$ or $`1-G`$.
 
 ### Proof
 
-A Gaussian restriction has entropy $`S(G)=\operatorname{tr}h_2(G)`$; diagonalizing its covariance gives independent one-mode occupations. See [Peschel](../references/README.md#gaussian-reductions) for the reduced-density-matrix construction. The even product of the restrictions to $`E`$ and $`F`$ is the Gaussian state with covariance $`D`$, so $`I(E:F)=\operatorname{tr}h_2(D)-\operatorname{tr}h_2(G)`$.
+A Gaussian restriction has entropy $`S(G)=\mathrm{tr}h_2(G)`$; diagonalizing its covariance gives independent one-mode occupations. See [Peschel](../references/README.md#gaussian-reductions) for the reduced-density-matrix construction. The even product of the restrictions to $`E`$ and $`F`$ is the Gaussian state with covariance $`D`$, so $`I(E:F)=\mathrm{tr}h_2(D)-\mathrm{tr}h_2(G)`$.
 
 Associate to any $`N\times N`$ positive contraction $`Q`$ the ordinary $`2N`$-dimensional density matrix
 
@@ -393,7 +421,7 @@ Associate to any $`N\times N`$ positive contraction $`Q`$ the ordinary $`2N`$-di
 \widehat Q=\frac1N\begin{pmatrix}Q&0\\0&1-Q\end{pmatrix}.
 ```
 
-It has entropy $`S(\widehat Q)=\log N+N^{-1}\operatorname{tr}h_2(Q)`$. Moreover,
+It has entropy $`S(\widehat Q)=\log N+N^{-1}\mathrm{tr}h_2(Q)`$. Moreover,
 
 ```math
 

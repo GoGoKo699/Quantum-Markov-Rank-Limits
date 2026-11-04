@@ -17,20 +17,23 @@ m\,c_{j,1}^\dagger c_{j,2}
 +c_{j,1}^\dagger c_{j+1,2}
 +\mathrm{h.c.}
 \right].
-\tag{C1}
+\qquad\text{(C1)}
 ```
 
 This Hamiltonian has nearest-neighbor range and a gap at least $`m-1`$. Denote its thermodynamic ground state by $`\omega_m^{\mathrm{ct}}`$. With the covariance and Fourier conventions of the [model note](model-and-rank.md), its occupied-band covariance is
 
 ```math
 
+\begin{gathered}
 P_m(k)=\frac12\left[
 I-\frac1{E_m(k)}
 \begin{pmatrix}0&m+e^{ik}\\m+e^{-ik}&0\end{pmatrix}
 \right],
-\qquad
+\\
+
 E_m(k)=|m+e^{ik}|.
-\tag{C2}
+\end{gathered}
+\qquad\text{(C2)}
 ```
 
 The local-faithfulness proof for a single SSH component in Proposition 1 of that note applies without change.
@@ -50,7 +53,7 @@ d_{j,a}=c_{j,a}-c_{j+1,a},
 \mathcal L
 =\frac12\sum_{j,a}
 \left(\mathcal D[d_{j,a}]+\mathcal D[d_{j,a}^\dagger]\right).
-\tag{C3}
+\qquad\text{(C3)}
 ```
 
 There is no Hamiltonian term in this evolution. The generator is local in the fermionic algebra; no spin-local realization is asserted here. Each balanced pair is unital because
@@ -76,7 +79,7 @@ C_\Lambda(t)=\frac I2+
 e^{-tF_\Lambda/2}
 \left(C_\Lambda(0)-\frac I2\right)
 e^{-tF_\Lambda/2}.
-\tag{C3a}
+\qquad\text{(C3a)}
 ```
 
 The uniform bound $`\|F_\Lambda\|\leq4`$ and convergence of its finite-range matrix elements give local convergence of (C3a). The limiting Gaussian covariances determine all finite even-state restrictions. In momentum space, put
@@ -101,7 +104,7 @@ The gain and loss one-particle rate matrices are both $`f(k)I/2`$. Hence
 C_t(k)=\frac I2+e^{-t f(k)}
 \left(P_m(k)-\frac I2\right).
 }
-\tag{C4}
+\qquad\text{(C4)}
 ```
 
 Its occupations are $`q_t(k)`$ and $`1-q_t(k)`$, where
@@ -109,7 +112,7 @@ Its occupations are $`q_t(k)`$ and $`1-q_t(k)`$, where
 ```math
 
 q_t(k)=\frac{1-e^{-t f(k)}}2.
-\tag{C5}
+\qquad\text{(C5)}
 ```
 
 This is the damping convention used in the [balanced numerical data](../data/README.md).
@@ -122,7 +125,7 @@ For every fixed finite $`t>0`$, $`q_t(k)>0`$ except at $`k=0`$ modulo $`2\pi`$, 
 
 C_t(k)\ge q_t(k)I,\qquad
 I-C_t(k)\ge q_t(k)I.
-\tag{C6}
+\qquad\text{(C6)}
 ```
 
 If a nonzero vector $`v`$ has finite support, its Fourier transform is a nonzero vector of Laurent polynomials, and
@@ -132,7 +135,7 @@ If a nonzero vector $`v`$ has finite support, its Fourier transform is a nonzero
 \langle v,C_tv\rangle
 \ge\int_{-\pi}^{\pi}\frac{dk}{2\pi}\,
 q_t(k)\|v(k)\|^2>0.
-\tag{C7}
+\qquad\text{(C7)}
 ```
 
 The same estimate holds for $`I-C_t`$. Thus every finite covariance compression has eigenvalues strictly between zero and one, and every finite reduced density operator is faithful. This proof uses positivity almost everywhere; it does not treat the infinite-range attenuation matrix $`e^{-t f/2}`$ as a finite-range map on compactly supported vectors.
@@ -142,7 +145,7 @@ The same orbital dressing $`u_m(k)`$ as in (M30)–(M33) sends the onsite projec
 ```math
 
 \rho_{m,t}^{\mathrm{ct}}=\mathcal U_m(\tau_t^{\mathrm{ct}}),
-\tag{C8}
+\qquad\text{(C8)}
 ```
 
 where, after a fixed onsite orbital rotation, the reference state has two independent sectors with covariances $`q_t`$ and $`1-q_t`$. The initial state is the same exponentially local dressing of an onsite product state. The [locality note](locality-and-cmi.md) therefore establishes finite initial Markov length and transfers the reference CMI asymptotic through this dressing.
@@ -162,7 +165,7 @@ Equation (C5) agrees with it at
 ```math
 
 t_{\mathrm{NL}}=2t.
-\tag{C9}
+\qquad\text{(C9)}
 ```
 
 Equivalently, on each orbital sector, (C3) is twice the staggered NL generator: their bond mode is normalized by $`1/\sqrt2`$, while $`d_{j,a}`$ in (C3) is not.
@@ -174,7 +177,7 @@ Their rigorous interval formula, Eq. (174), is written for $`N`$ two-site cells,
 S_{\mathrm{NL}}(N)
 =N\bar s+\Delta-\frac{t_{\mathrm{NL}}\zeta(3)}{32N^2}
 +O(N^{-3}).
-\tag{C10}
+\qquad\text{(C10)}
 ```
 
 Substituting (C9) and $`N=n/2`$ gives the single-orbital coefficient
@@ -182,12 +185,15 @@ $`-t\zeta(3)/(4n^2)`$. The two complementary orbital sectors have equal entropy,
 
 ```math
 
+\begin{gathered}
 S_{\tau_t^{\mathrm{ct}}}(n)
 =n s_t+b_t-\frac{\kappa_t^{\mathrm{ct}}}{n^2}
 +O_t(n^{-3}),
-\qquad
+\\
+
 \kappa_t^{\mathrm{ct}}=\frac{t\zeta(3)}2.
-\tag{C11}
+\end{gathered}
+\qquad\text{(C11)}
 ```
 
 The source directly supplies (C11) for even $`n`$. Applying the dressing argument after blocking two sites uses only those interval lengths. Arbitrary integer tripartitions follow by enlarging or contracting endpoint intervals by at most two sites to compare with aligned tripartitions. These bounded boundary shifts preserve the leading macroscopic CMI coefficient.
@@ -198,13 +204,15 @@ For fixed $`m>1`$, fixed finite $`t>0`$, and positive $`a,b,c`$, the CMI of cons
 
 ```math
 
-I_{\rho_{m,t}^{\mathrm{ct}}}(A:C\mid B)
-=\frac{t\zeta(3)}{2L^2}
+\begin{aligned}
+&I_{\rho_{m,t}^{\mathrm{ct}}}(A:C\mid B)\\
+&=\frac{t\zeta(3)}{2L^2}
 \left[
 \frac1{b^2}+\frac1{(a+b+c)^2}
 -\frac1{(a+b)^2}-\frac1{(b+c)^2}
 \right]+o(L^{-2}).
-\tag{C12}
+\end{aligned}
+\qquad\text{(C12)}
 ```
 
 In particular,
@@ -215,7 +223,7 @@ In particular,
 I_{\rho_{m,t}^{\mathrm{ct}}}(L:L\mid L)
 =\frac{11t\zeta(3)}{36L^2}+o(L^{-2}).
 }
-\tag{C13}
+\qquad\text{(C13)}
 ```
 
 The notation in (C13) means three consecutive equal intervals, as in (T2).
@@ -229,7 +237,7 @@ I_{\rho_{m,t}^{\mathrm{ct}}}
 (A:C_-\cup C_+\mid B_-\cup B_+)
 =\frac{643t\zeta(3)}{900L^2}+o(L^{-2}).
 }
-\tag{C14}
+\qquad\text{(C14)}
 ```
 
 This positive algebraic tail establishes infinite Markov length in the fully shielded geometry. It holds for arbitrarily short positive times. The thermodynamic limit is taken first, followed by $`L\to\infty`$ at fixed $`m,t`$; the bounds are not uniform in a joint zero-time or infinite-time limit. All coefficients are in nats and are divided by $`\log2`$ when entropy is measured in bits.

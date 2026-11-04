@@ -72,7 +72,7 @@ Each record gives a central question, an understanding target, earlier-ID depend
 
 **Central question.** When can a small one-particle matrix determine a many-body state's entropy and rank?
 
-**Understanding target.** Distinguish the covariance $`C_{ij}=\omega(c_j^\dagger c_i)`$ from the normalized many-body density matrix. For a gauge-invariant Gaussian state, explain independent occupation eigenvalues, the formula $`S(\rho_R)=\operatorname{Tr}h(C_R)`$, and why all occupations in $`(0,1)`$ are equivalent to a faithful finite reduction. Keep the project's natural-log entropy convention explicit.
+**Understanding target.** Distinguish the covariance $`C_{ij}=\omega(c_j^\dagger c_i)`$ from the normalized many-body density matrix. For a gauge-invariant Gaussian state, explain independent occupation eigenvalues, the formula $`S(\rho_R)=\mathrm{Tr}h(C_R)`$, and why all occupations in $`(0,1)`$ are equivalent to a faithful finite reduction. Keep the project's natural-log entropy convention explicit.
 
 **Dependencies and story role.** M01–M04. This supplies the calculational representation that connects local probabilities to the many-body problem.
 

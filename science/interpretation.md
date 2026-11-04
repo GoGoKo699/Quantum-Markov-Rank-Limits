@@ -17,10 +17,10 @@ where $`Q_r`$ projects onto the cells from $`-r`$ to $`r`$. Put $`w_r=Q_rv/\|Q_r
 
 ```math
 
-1-\langle w_r,Pw_r\rangle
-=\|(1-P)w_r\|^2
-\leq
-\frac{\|(1-Q_r)v\|^2}{\|Q_rv\|^2}.
+\begin{aligned}
+1-\langle w_r,Pw_r\rangle&=\|(1-P)w_r\|^2\\
+&\leq\frac{\|(1-Q_r)v\|^2}{\|Q_rv\|^2}.
+\end{aligned}
 ```
 
 For sufficiently large $`r`$, the denominator is bounded below by a positive constant. The variational principle therefore gives
@@ -64,7 +64,7 @@ The noise strength tends to zero in the diamond norm of each finite-support gate
 
 ```math
 
-\|\Phi_{x,\epsilon}-\operatorname{id}\|_\diamond
+\|\Phi_{x,\epsilon}-\mathrm{id}\|_\diamond
 \leq 8\epsilon^2.
 ```
 
@@ -85,9 +85,10 @@ Since $`m-1\leq E_m(k)\leq m+1`$, its occupation eigenvalues obey
 
 ```math
 
-\delta_\beta I\leq C_\beta(k)\leq(1-\delta_\beta)I,
-\qquad
-\delta_\beta=\frac{1}{1+e^{\beta(m+1)}}>0.
+\begin{aligned}
+&\delta_\beta I\leq C_\beta(k)\leq(1-\delta_\beta)I,\\
+&\delta_\beta=\frac{1}{1+e^{\beta(m+1)}}>0.
+\end{aligned}
 ```
 
 Let $`M(k)`$ be the two-layer contraction on the parity subcell index. The same unital noise gives

@@ -13,8 +13,11 @@ Python 3 with NumPy and SciPy is sufficient. The archived calculations used
 Python 3.12.14, NumPy 2.3.5, and SciPy 1.17.0. From the repository root:
 
 ```bash
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python code/reproduce.py --checks-only
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python code/reproduce.py --output data/results.json
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
+  python code/reproduce.py --checks-only
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
+  python code/reproduce.py \
+  --output data/results.json
 ```
 
 The first command checks covariance identities, unitality, the zero-noise

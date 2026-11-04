@@ -10,10 +10,10 @@ The educational anchor is [Mark M. Wilde, *Quantum Information Theory*, second e
 
 **Connection to the map:** [M01–M03](milestones.md#m01-local-modes-density-operators-and-strict-positivity) and [M07–M09](milestones.md#m07-from-entropy-to-conditional-quantum-correlations). **Wilde:** §§4.1, 4.3, 11.4, 11.6–11.7.
 
-Start with three finite systems $`A,B,C`$ and their joint density operator $`\rho_{ABC}`$. The reduced operator $`\rho_{AB}=\operatorname{Tr}_C\rho_{ABC}`$ reproduces all measurements supported on $`AB`$. The von Neumann entropy of a reduction is
+Start with three finite systems $`A,B,C`$ and their joint density operator $`\rho_{ABC}`$. The reduced operator $`\rho_{AB}=\mathrm{Tr}_C\rho_{ABC}`$ reproduces all measurements supported on $`AB`$. The von Neumann entropy of a reduction is
 
 ```math
-S_\rho(A)=-\operatorname{Tr}(\rho_A\log\rho_A).
+S_\rho(A)=-\mathrm{Tr}(\rho_A\log\rho_A).
 ```
 
 The project's conditional mutual information, or CMI, is
@@ -40,7 +40,7 @@ The buffer widths separate $`A`$ from the exterior pieces. Finite Markov length 
 
 ```math
 I_\rho(A:C\mid B)
-\le P(|A|,|B|,|C|)\,e^{-\operatorname{dist}(A,C)/\xi}
+\le P(|A|,|B|,|C|)\,e^{-\mathrm{dist}(A,C)/\xi}
 ```
 
 throughout the specified family of finite shielded regions. This is a spatially uniform requirement. A small CMI for one finite triple, or exponential decay of a particular two-point correlation function, does not by itself establish it. The exact convention is in [the theorem's definitions](../science/instability-theorem.md#1-definitions-normalization-and-order-of-limits).
@@ -86,8 +86,8 @@ For $`0<\eta<1`$, consider the single-mode density operator
 It is strictly positive because both eigenvalues are positive. Consequently every nonzero positive measurement effect $`E`$ has positive probability:
 
 ```math
-\operatorname{Tr}(\rho_\eta E)
-\ge \min(\eta,1-\eta)\operatorname{Tr}E>0.
+\mathrm{Tr}(\rho_\eta E)
+\ge \min(\eta,1-\eta)\mathrm{Tr}E>0.
 ```
 
 This local mixedness is compatible with a pure global state. The vector
@@ -112,7 +112,7 @@ Now let $`\eta_\ell=e^{-\ell}`$ for positive integers $`\ell`$. Every $`\rho_{\e
 
 Only the first statement holds.
 
-The Gaussian version makes the occupation/many-body distinction visible. Take two independent normal modes with occupations $`\eta`$ and $`1-\eta`$. Their covariance is $`\operatorname{diag}(\eta,1-\eta)`$, and the many-body eigenvalues, in some order, are
+The Gaussian version makes the occupation/many-body distinction visible. Take two independent normal modes with occupations $`\eta`$ and $`1-\eta`$. Their covariance is $`\mathrm{diag}(\eta,1-\eta)`$, and the many-body eigenvalues, in some order, are
 
 ```math
 \eta^2,\quad \eta(1-\eta),\quad
@@ -193,7 +193,7 @@ The physical gate acts on two neighboring fine sites. For each orbital it couple
 
 ```math
 \Phi(\rho)
-=\operatorname{Tr}_E\!\left[
+=\mathrm{Tr}_E\!\left[
 V\left(\rho\otimes\frac{I_E}{d_E}\right)V^\dagger
 \right].
 ```

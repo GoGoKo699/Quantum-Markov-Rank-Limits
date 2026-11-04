@@ -8,7 +8,8 @@ The archived calculations used Python 3.12.14, NumPy 2.3.5, and SciPy 1.17.0. Pi
 
 ```bash
 python -m pip install -r verification/requirements.txt
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python code/reproduce.py --checks-only
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
+  python code/reproduce.py --checks-only
 ```
 
 The command prints the maximum errors and raises an exception if any quick-check residual exceeds $`10^{-12}`$. It does not modify files or run the dense entropy sweep. The checks include:
@@ -24,7 +25,9 @@ The refreshed quick residuals are below $`4\times10^{-16}`$ in the recorded envi
 To regenerate all finite-size rows without overwriting the archived data:
 
 ```bash
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python code/reproduce.py --output /tmp/quantum-markov-rank-results.json
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
+  python code/reproduce.py \
+  --output /tmp/quantum-markov-rank-results.json
 ```
 
 The Fourier grid contains 32,768 points. The largest dense matrices are $`1152\times1152`$ for finite-depth noise and $`768\times768`$ for continuous time. The output records parameters, numerical-library versions, covariance checks, interval CMI, and the analytical scaled limits. The [data guide](../data/README.md) gives representative values and the provenance of the completed sweep. Reproduced values may differ in their last digits across platforms.

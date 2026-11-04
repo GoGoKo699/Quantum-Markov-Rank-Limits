@@ -60,8 +60,11 @@ The archived calculations used Python 3.12.14, NumPy 2.3.5, and SciPy 1.17.0. Fr
 
 ```bash
 python -m pip install -r verification/requirements.txt
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python code/reproduce.py --checks-only
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python code/reproduce.py --output /tmp/quantum-markov-rank-results.json
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
+  python code/reproduce.py --checks-only
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 \
+  python code/reproduce.py \
+  --output /tmp/quantum-markov-rank-results.json
 ```
 
 The quick command checks independent covariance formulas, unitality, limiting cases, and Fourier conventions. The full command regenerates the entropy rows in [data/results.json](data/results.json). Finite-size calculations support the theorem; they cannot establish strict local faithfulness or the infinite-distance asymptotic by themselves.

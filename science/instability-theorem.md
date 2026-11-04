@@ -12,9 +12,11 @@ For finite disjoint fermionic regions, entropy is the entropy of the restricted 
 
 ```math
 
-I_\sigma(A:C\mid B)
-=S_\sigma(AB)+S_\sigma(BC)-S_\sigma(B)-S_\sigma(ABC).
-\tag{T1}
+\begin{aligned}
+&I_\sigma(A:C\mid B)\\
+&\quad=S_\sigma(AB)+S_\sigma(BC)-S_\sigma(B)-S_\sigma(ABC).
+\end{aligned}
+\qquad\text{(T1)}
 ```
 
 For a coarse-translation-invariant state, write $`S_\sigma(n)`$ for the entropy of $`n`$ consecutive complete cells and
@@ -22,12 +24,11 @@ For a coarse-translation-invariant state, write $`S_\sigma(n)`$ for the entropy 
 ```math
 
 \begin{aligned}
-\mathcal I_\sigma(n_A,n_B,n_C)
-&:=I_\sigma(A:C\mid B)\\
-&=S_\sigma(n_A+n_B)+S_\sigma(n_B+n_C)
--S_\sigma(n_B)-S_\sigma(n_A+n_B+n_C),
+\mathcal I_\sigma(n_A,n_B,n_C)&:=I_\sigma(A:C\mid B)\\
+&=S_\sigma(n_A+n_B)+S_\sigma(n_B+n_C)\\
+&\quad-S_\sigma(n_B)-S_\sigma(n_A+n_B+n_C),
 \end{aligned}
-\tag{T2}
+\qquad\text{(T2)}
 ```
 
 where $`A,B,C`$ are consecutive intervals of the indicated lengths.
@@ -36,19 +37,23 @@ The Markov-length definition uses the fully shielded geometry
 
 ```math
 
-C_-\,\,B_-\,\,A\,\,B_+\,\,C_+,
-\qquad B=B_-\cup B_+,\qquad C=C_-\cup C_+.
-\tag{T3}
+\begin{aligned}
+&C_-\,\,B_-\,\,A\,\,B_+\,\,C_+,\\
+&B=B_-\cup B_+,\qquad C=C_-\cup C_+.
+\end{aligned}
+\qquad\text{(T3)}
 ```
 
 A finite Markov length means that, uniformly over these finite shielded regions,
 
 ```math
 
+\begin{aligned}
 I_\sigma(A:C\mid B)
 \le P(|A|,|B|,|C|)\,
-e^{-\operatorname{dist}(A,C)/\xi}
-\tag{T4}
+e^{-\mathrm{dist}(A,C)/\xi}
+\end{aligned}
+\qquad\text{(T4)}
 ```
 
 for some finite $`\xi`$ and a fixed polynomial $`P`$. This is the size-prefactor convention of NL, Eq. (2). Constant changes between fine-site and coarse-cell distance do not affect whether $`\xi`$ is finite.
@@ -57,8 +62,10 @@ The states in the theorem are infinite-chain states. They are obtained from peri
 
 ```math
 
+\begin{aligned}
 m>1,\qquad 0<\epsilon<\epsilon_*=\pi/2.
-\tag{T5}
+\end{aligned}
+\qquad\text{(T5)}
 ```
 
 The asymptotics are not claimed uniformly as $`m\downarrow1`$ or $`\epsilon\downarrow0`$. In particular, the large-region limit and the zero-noise limit must not be interchanged without an additional estimate.
@@ -69,21 +76,22 @@ Define
 
 ```math
 
-\gamma_\epsilon
-=\frac{\sin^2\epsilon}{8(1+\cos^2\epsilon)},
-\qquad
-\kappa_\epsilon=\gamma_\epsilon\zeta(3),
-\tag{T6}
+\begin{aligned}
+\gamma_\epsilon&=\frac{\sin^2\epsilon}{8(1+\cos^2\epsilon)},\\
+\kappa_\epsilon&=\gamma_\epsilon\zeta(3),
+\end{aligned}
+\qquad\text{(T6)}
 ```
 
 and, for $`a,b,c>0`$,
 
 ```math
 
-F(a,b,c)
-=\frac1{b^2}+\frac1{(a+b+c)^2}
--\frac1{(a+b)^2}-\frac1{(b+c)^2}.
-\tag{T7}
+\begin{aligned}
+F(a,b,c)&=\frac1{b^2}+\frac1{(a+b+c)^2}\\
+&\quad-\frac1{(a+b)^2}-\frac1{(b+c)^2}.
+\end{aligned}
+\qquad\text{(T7)}
 ```
 
 ### Theorem
@@ -97,11 +105,12 @@ For the model of (T5):
 ```math
 
 \boxed{
-\mathcal I_{\rho_{m,\epsilon}}(a_L,b_L,c_L)
-=\frac{\kappa_\epsilon F(a,b,c)}{L^2}
-+o(L^{-2}).
+\begin{aligned}
+\mathcal I_{\rho_{m,\epsilon}}(a_L,b_L,c_L)\\
+\quad=\frac{\kappa_\epsilon F(a,b,c)}{L^2}+o(L^{-2}).
+\end{aligned}
 }
-\tag{T8}
+\qquad\text{(T8)}
 ```
 
 4. For five consecutive blocks $`C_-,B_-,A,B_+,C_+`$, each of $`L`$ cells,
@@ -109,13 +118,12 @@ For the model of (T5):
 ```math
 
 \boxed{
-I_{\rho_{m,\epsilon}}
-(A:C_-\cup C_+\mid B_-\cup B_+)
-=\frac{643}{450}\,
-\frac{\kappa_\epsilon}{L^2}
-+o(L^{-2}).
+\begin{aligned}
+I_{\rho_{m,\epsilon}}(A:C_-\cup C_+\mid B_-\cup B_+)\\
+\quad=\frac{643}{450}\,\frac{\kappa_\epsilon}{L^2}+o(L^{-2}).
+\end{aligned}
 }
-\tag{T9}
+\qquad\text{(T9)}
 ```
 
 Consequently $`\rho_{m,\epsilon}`$ has infinite Markov length. Each gate of $`\mathcal E_\epsilon`$ is unital and has distance at most $`8\epsilon^2`$ from the identity in the local diamond norm, so the conclusion holds under arbitrarily weak gates.
@@ -124,10 +132,12 @@ The coefficient in (T8) is strictly positive:
 
 ```math
 
+\begin{aligned}
 F(a,b,c)
 =\int_0^a\!\int_0^c
 \frac{6\,ds\,dt}{(b+s+t)^4}>0.
-\tag{T10}
+\end{aligned}
+\qquad\text{(T10)}
 ```
 
 It is independent of the fixed SSH parameter $`m`$. The approximation constants and the finite-size crossover can depend on $`m`$.
@@ -144,11 +154,11 @@ is
 
 ```math
 
-S_{\mathrm{NL},\epsilon}(n)
-=n\bar s_\epsilon+\Delta_\epsilon
--\frac{\gamma_\epsilon\zeta(3)}{2n^2}
-+O_\epsilon(n^{-3}).
-\tag{T11}
+\begin{aligned}
+S_{\mathrm{NL},\epsilon}(n)&=n\bar s_\epsilon+\Delta_\epsilon\\
+&\quad-\frac{\gamma_\epsilon\zeta(3)}{2n^2}+O_\epsilon(n^{-3}).
+\end{aligned}
+\qquad\text{(T11)}
 ```
 
 The value of $`\gamma_\epsilon`$ is their Eq. (13). Equation (T11) is an interval result, not an inference from a periodic-ring entropy. Its cell size is exactly the coarse-cell size used here.
@@ -157,22 +167,22 @@ The reference state $`\tau_\epsilon`$ in the model note has independent orbital 
 
 ```math
 
-S_{\tau_\epsilon}(n)
-=2S_{\mathrm{NL},\epsilon}(n)
-=2n\bar s_\epsilon+2\Delta_\epsilon
--\frac{\kappa_\epsilon}{n^2}
-+O_\epsilon(n^{-3}).
-\tag{T12}
+\begin{aligned}
+S_{\tau_\epsilon}(n)&=2S_{\mathrm{NL},\epsilon}(n)\\
+&=2n\bar s_\epsilon+2\Delta_\epsilon-\frac{\kappa_\epsilon}{n^2}+O_\epsilon(n^{-3}).
+\end{aligned}
+\qquad\text{(T12)}
 ```
 
 Substitution into (T2) cancels the extensive and boundary terms. For fixed positive macroscopic ratios,
 
 ```math
 
-\mathcal I_{\tau_\epsilon}(a_L,b_L,c_L)
-=\frac{\kappa_\epsilon F(a,b,c)}{L^2}
-+O_\epsilon(L^{-3}).
-\tag{T13}
+\begin{aligned}
+\mathcal I_{\tau_\epsilon}(a_L,b_L,c_L)\\
+\quad=\frac{\kappa_\epsilon F(a,b,c)}{L^2}+O_\epsilon(L^{-3}).
+\end{aligned}
+\qquad\text{(T13)}
 ```
 
 Bounded integer rounding changes only the $`O(L^{-3})`$ term. No estimate of derivatives of an unspecified entropy remainder is needed, since all four interval lengths are proportional to $`L`$.
@@ -183,10 +193,11 @@ The model gives the exact identities
 
 ```math
 
-\omega_m=\mathcal U_m(\omega_{\mathrm{prod}}),
-\qquad
-\rho_{m,\epsilon}=\mathcal U_m(\tau_\epsilon),
-\tag{T14}
+\begin{aligned}
+\omega_m&=\mathcal U_m(\omega_{\mathrm{prod}}),\\
+\rho_{m,\epsilon}&=\mathcal U_m(\tau_\epsilon),
+\end{aligned}
+\qquad\text{(T14)}
 ```
 
 where $`\mathcal U_m`$ is a unit-time, number-conserving Gaussian evolution with exponentially decaying hopping amplitudes.
@@ -202,10 +213,12 @@ The final buffer is $`xYz`$. The chain rule and strong subadditivity give
 
 ```math
 
-I_{\mathrm{after}}(A:C\mid xYz)
-\le I_{\mathrm{after}}(Ax:zC\mid Y)
-=I_{\mathrm{before}}(X:Z\mid Y).
-\tag{T15}
+\begin{aligned}
+&I_{\mathrm{after}}(A:C\mid xYz)\\
+&\quad\le I_{\mathrm{after}}(Ax:zC\mid Y)\\
+&\quad=I_{\mathrm{before}}(X:Z\mid Y).
+\end{aligned}
+\qquad\text{(T15)}
 ```
 
 The equality is invariance under the three block-local unitaries. Exterior sites absorbed into the endpoint regions can be traced out using endpoint data processing. Repeating the construction through the circuit moves each boundary by at most its total light-cone radius. Applying the same argument to the inverse circuit gives the lower bound.
@@ -214,9 +227,11 @@ More explicitly, suppose local circuit approximations of $`\mathcal U_m`$ and it
 
 ```math
 
-r_L=o(L),\qquad
-L\delta_L+h(\delta_L)=o(L^{-2}).
-\tag{T16}
+\begin{aligned}
+r_L&=o(L),\\
+L\delta_L+h(\delta_L)&=o(L^{-2}).
+\end{aligned}
+\qquad\text{(T16)}
 ```
 
 Up to an error $`e_L=o(L^{-2})`$, the resulting CMI is bounded below and above by
@@ -224,15 +239,11 @@ Up to an error $`e_L=o(L^{-2})`$, the resulting CMI is bounded below and above b
 ```math
 
 \begin{aligned}
-&\mathcal I_{\tau_\epsilon}
-(a_L-2r_L,\ b_L+2r_L,\ c_L-2r_L)-e_L\\
-&\hspace{12mm}\le
-\mathcal I_{\rho_{m,\epsilon}}(a_L,b_L,c_L)\\
-&\hspace{12mm}\le
-\mathcal I_{\tau_\epsilon}
-(a_L+2r_L,\ b_L-2r_L,\ c_L+2r_L)+e_L .
+&\mathcal I_{\tau_\epsilon}(a_L-2r_L,\ b_L+2r_L,\ c_L-2r_L)-e_L\\
+&\quad\le\mathcal I_{\rho_{m,\epsilon}}(a_L,b_L,c_L)\\
+&\quad\le\mathcal I_{\tau_\epsilon}(a_L+2r_L,\ b_L-2r_L,\ c_L+2r_L)+e_L .
 \end{aligned}
-\tag{T17}
+\qquad\text{(T17)}
 ```
 
 Integers can be rounded outward, and all lengths are positive for sufficiently large $`L`$. The factors $`2r_L`$ allow both endpoints of each endpoint interval to move; they are conservative.
@@ -257,35 +268,43 @@ We first record why separated blocks of the output have exponentially small ordi
 
 ```math
 
-|C_{ij}|\le K e^{-\mu\operatorname{dist}(i,j)}.
-\tag{T18}
+\begin{aligned}
+|C_{ij}|\le K e^{-\mu\mathrm{dist}(i,j)}.
+\end{aligned}
+\qquad\text{(T18)}
 ```
 
 For disjoint finite mode sets $`X,Y`$, let
 
 ```math
 
-D=C_{XY}-(C_X\oplus C_Y),\qquad
-n=\text{number of modes in }X\cup Y.
+\begin{aligned}
+D&=C_{XY}-(C_X\oplus C_Y),\\
+n&=\text{number of modes in }X\cup Y.
+\end{aligned}
 ```
 
 For $`\|D\|_1/n\le1/2`$, matrix eigenvalue variation and binary-entropy continuity yield
 
 ```math
 
+\begin{aligned}
 I(X:Y)
 \le n\,h\!\left(\frac{\|D\|_1}{n}\right).
-\tag{T19}
+\end{aligned}
+\qquad\text{(T19)}
 ```
 
 This inequality requires no lower bound on covariance eigenvalues. It follows by bounding the $`\ell^1`$ change of the ordered eigenvalues by $`\|D\|_1`$, using
 $`|h(s)-h(t)|\le h(|s-t|)`$, and then using concavity of $`h`$. For blocks with $`O(L)`$ modes separated by $`L`$ cells, (T18) gives
-$`\|D\|_1\le\operatorname{poly}(L)e^{-\mu L}`$. Hence
+$`\|D\|_1\le\mathrm{poly}(L)e^{-\mu L}`$. Hence
 
 ```math
 
-I(X:Y)=O(\operatorname{poly}(L)e^{-\mu' L})
-\tag{T20}
+\begin{aligned}
+I(X:Y)=O(\mathrm{poly}(L)e^{-\mu' L})
+\end{aligned}
+\qquad\text{(T20)}
 ```
 
 for a positive $`\mu'`$. This applies also to the disconnected fermionic regions below.
@@ -294,9 +313,11 @@ Now take the five consecutive equal blocks in (T3), each of $`L`$ cells. Define
 
 ```math
 
-M_2(L)=I(C_-B_-:B_+C_+),\qquad
-M_1(L)=I(B_-:B_+).
-\tag{T21}
+\begin{aligned}
+M_2(L)&=I(C_-B_-:B_+C_+),\\
+M_1(L)&=I(B_-:B_+).
+\end{aligned}
+\qquad\text{(T21)}
 ```
 
 Both pairs are separated by the central block $`A`$, so both quantities obey (T20). The defining entropies in (T1) give the exact identity
@@ -304,35 +325,40 @@ Both pairs are separated by the central block $`A`$, so both quantities obey (T2
 ```math
 
 \begin{aligned}
-I(A:C_-\cup C_+\mid B_-\cup B_+)
-={}&S(3L)+2S(2L)-2S(L)-S(5L)\\
-&-M_2(L)+M_1(L).
+&I(A:C_-\cup C_+\mid B_-\cup B_+)\\
+&\quad=S(3L)+2S(2L)-2S(L)-S(5L)\\
+&\qquad-M_2(L)+M_1(L).
 \end{aligned}
-\tag{T22}
+\qquad\text{(T22)}
 ```
 
 Translation invariance by one coarse cell gives a second exact identity:
 
 ```math
 
-S(3L)+2S(2L)-2S(L)-S(5L)
-=\mathcal I_\rho(L,L,L)+\mathcal I_\rho(2L,L,2L).
-\tag{T23}
+\begin{aligned}
+&S(3L)+2S(2L)-2S(L)-S(5L)\\
+&\quad=\mathcal I_\rho(L,L,L)+\mathcal I_\rho(2L,L,2L).
+\end{aligned}
+\qquad\text{(T23)}
 ```
 
 Thus the two required one-sided asymptotics are already covered by (T8). Their coefficients are
 
 ```math
 
-F(1,1,1)=\frac{11}{18},
-\qquad
-F(2,1,2)=\frac{184}{225},
+\begin{aligned}
+F(1,1,1)&=\frac{11}{18},\\
+F(2,1,2)&=\frac{184}{225},
+\end{aligned}
 ```
 
 ```math
 
+\begin{aligned}
 \frac{11}{18}+\frac{184}{225}=\frac{643}{450}.
-\tag{T24}
+\end{aligned}
+\qquad\text{(T24)}
 ```
 
 Equations (T20)–(T24) prove (T9).
@@ -341,10 +367,11 @@ In particular, for every fixed allowed $`m,\epsilon`$, sufficiently large $`L`$ 
 
 ```math
 
-I_{\rho_{m,\epsilon}}
-(A:C_-\cup C_+\mid B_-\cup B_+)
-\ge\frac{643\,\kappa_\epsilon}{900\,L^2}>0.
-\tag{T25}
+\begin{aligned}
+&I_{\rho_{m,\epsilon}}(A:C_-\cup C_+\mid B_-\cup B_+)\\
+&\quad\ge\frac{643\,\kappa_\epsilon}{900\,L^2}>0.
+\end{aligned}
+\qquad\text{(T25)}
 ```
 
 The five regions all have sizes proportional to $`L`$, and the shielding width is also proportional to $`L`$. No polynomial size prefactor multiplying an exponential in that width can dominate (T25) for arbitrarily large $`L`$. The output therefore has infinite Markov length in the fully shielded definition.
@@ -357,10 +384,12 @@ The [locality and CMI note](locality-and-cmi.md) proves an exponential bound by 
 
 ```math
 
+\begin{aligned}
 I_{\omega_m}(A:C\mid B)
 \le P_m(|A|,|B|,|C|)
-e^{-\operatorname{dist}(A,C)/\xi_m}
-\tag{T26}
+e^{-\mathrm{dist}(A,C)/\xi_m}
+\end{aligned}
+\qquad\text{(T26)}
 ```
 
 with finite $`\xi_m`$ and a polynomial $`P_m`$.
@@ -384,22 +413,20 @@ In particular,
 
 ```math
 
-\mathcal I_{\rho_{m,\epsilon}}(L,L,L)
-=
-\frac{11\zeta(3)\sin^2\epsilon}
-{144(1+\cos^2\epsilon)}\,L^{-2}
-+o(L^{-2}),
-\tag{T27}
+\begin{aligned}
+\mathcal I_{\rho_{m,\epsilon}}(L,L,L)\\
+\quad=\frac{11\zeta(3)\sin^2\epsilon}{144(1+\cos^2\epsilon)}\,L^{-2}+o(L^{-2}),
+\end{aligned}
+\qquad\text{(T27)}
 ```
 
 ```math
 
-I_{\mathrm{shielded}}
-=
-\frac{643\zeta(3)\sin^2\epsilon}
-{3600(1+\cos^2\epsilon)}\,L^{-2}
-+o(L^{-2}).
-\tag{T28}
+\begin{aligned}
+I_{\mathrm{shielded}}\\
+\quad=\frac{643\zeta(3)\sin^2\epsilon}{3600(1+\cos^2\epsilon)}\,L^{-2}+o(L^{-2}).
+\end{aligned}
+\qquad\text{(T28)}
 ```
 
 Since $`\gamma_\epsilon=\epsilon^2/16+O(\epsilon^4)`$, their weak-noise coefficients are respectively
