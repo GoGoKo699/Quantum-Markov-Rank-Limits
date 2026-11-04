@@ -13,6 +13,12 @@ An explicit separation between full-rank finite marginals and stability of quant
 - science/continuous-time.md: balanced Lindblad generator, damping normalization, faithfulness, and algebraic coefficients.
 - science/interpretation.md: local rank versus near-pure modes, resource accounting, thermal comparison, and limits of the conclusion.
 
+## Learning route
+
+- learning/README.md: self-directed study route using the one selected educational anchor, Wilde's Quantum Information Theory, second edition (2017).
+- learning/milestones.md: exactly 30 intrinsic understanding targets, M01–M14 background/preliminaries and M15–M30 project narrative/innovation; dependencies, conceptual connections, and precise source pointers.
+- learning/bridge.md: source-to-project explanation, notation translation, finite-spectrum and conditional-correlation examples, and the additional Gaussian/locality arguments required by this project.
+
 ## Sources and computation
 
 - references/README.md: related work, inherited ingredients, and boundaries of the literature comparison.

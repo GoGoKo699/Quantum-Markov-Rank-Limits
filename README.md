@@ -48,6 +48,12 @@ Start with the [scientific overview](science/README.md) for definitions and proo
 
 The [numerical data guide](data/README.md) explains the finite-size evidence and its normalization. The [verification guide](verification/README.md) gives commands and separates numerical corroboration from analytical proof. [llms.txt](llms.txt) maps scientific questions to their authoritative files.
 
+## Learning route
+
+The single educational anchor is **Mark M. Wilde, *Quantum Information Theory*, second edition (2017)**. The [learning guide](learning/README.md) connects its treatment of channels, entropy, conditional mutual information, and recoverability to this construction.
+
+Begin with the [source-to-project bridge](learning/bridge.md), which develops the distinction between full rank and a uniform spectral margin through small examples, then explains the compatible dressing and the CMI argument. The [30-milestone map](learning/milestones.md) provides the complete understanding route: 14 background milestones connect finite quantum systems to spatial conditional independence, and 16 project milestones assemble the construction, theorem, realizations, and scope.
+
 ## Reproduce the calculations
 
 The archived calculations used Python 3.12.14, NumPy 2.3.5, and SciPy 1.17.0. From the repository root:

@@ -117,7 +117,7 @@ For every finite set $`R`$ of modes, including disconnected sets and subsets of 
 
 ```math
 
-0<(C_{\mathrm{in},m})_R<I,
+0<(C_{\mathrm{in},m})_R\lt I,
 \qquad
 (\omega_m)_R>0.
 \tag{M10}
@@ -491,7 +491,7 @@ For every finite mode set $`R`$,
 
 ```math
 
-0<(C_{m,\epsilon})_R<I,
+0<(C_{m,\epsilon})_R\lt I,
 \qquad
 (\rho_{m,\epsilon})_R>0.
 \tag{M39}
