@@ -14,8 +14,6 @@ jobs:
     timeout-minutes: 30
     env:
       SOURCE_REVISION: 4648092060be081940a439496e6cb295ecdf4a8f
-      NODE_PATH: ${{ runner.temp }}/hosted-deps/node_modules
-      PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/hosted-browsers
     defaults:
       run:
         shell: bash
@@ -44,6 +42,8 @@ jobs:
           cp SHA256SUMS "$RUNNER_TEMP/hosted-helper-SHA256SUMS"
 
       - name: Install the documented capture dependencies
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/hosted-browsers
         run: |
           set -euo pipefail
           node --version
@@ -53,6 +53,9 @@ jobs:
           "$RUNNER_TEMP/hosted-deps/node_modules/.bin/playwright" install --with-deps chromium
 
       - name: Capture every tracked Markdown page at the pinned revision
+        env:
+          NODE_PATH: ${{ runner.temp }}/hosted-deps/node_modules
+          PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/hosted-browsers
         run: |
           set -euo pipefail
           [[ "$SOURCE_REVISION" =~ ^[0-9a-f]{40}$ ]]
