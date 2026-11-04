@@ -23,7 +23,7 @@ David C. Newsom and Michael Levin, **An Instability of the Quantum Markov Length
 
 The model uses its Eqs. (4)–(6). The scalar vacuum covariance and quadratic occupation-band edge are in Eqs. (9)–(13). Equation (15), with the rigorous derivation culminating in Appendix E.1, Eq. (132), supplies the interval-entropy correction. Appendix G gives alternative channel representations; Appendix H, especially Eqs. (169) and (174), supplies the scalar Lindblad companion and its entropy coefficient. Its Discussion explicitly identifies initial states with all finite reductions full rank as an unresolved possibility.
 
-Our contributions are the covariance-compatible orbital dressing, the no-compact-band-vector proof of local faithfulness, and the resulting instability theorem with that input. The scalar dark-mode mechanism and $\zeta(3)$ coefficient are attributed to NL.
+Our contributions are the covariance-compatible orbital dressing, the no-compact-band-vector proof of local faithfulness, and the resulting instability theorem with that input. The scalar dark-mode mechanism and $`\zeta(3)`$ coefficient are attributed to NL.
 
 ## NZH
 
@@ -104,3 +104,7 @@ Ferenc Iglói and Ingo Peschel, **On reduced density matrices for disjoint subsy
 Peschel (2003) derives reduced density matrices from correlation functions; Peschel and Eisler review covariance-based reduced states and entropy calculations. Iglói and Peschel explain why disconnected spin and fermion reductions generally differ, a distinction preserved in the spin proof.
 
 Machine-readable references are in [references.bib](references.bib).
+
+## Educational anchor
+
+Mark M. Wilde, **Quantum Information Theory**, second edition, Cambridge University Press (2017), [doi:10.1017/9781316809976](https://doi.org/10.1017/9781316809976). The [publisher's table of contents](https://assets.cambridge.org/97811071/76164/toc/9781107176164_toc.pdf) fixes the chapter and section locators used by the learning route. The selected anchor supplies channels, distance measures, entropy inequalities, conditional mutual information, and recoverability. The project supplies the Gaussian, locality, and thermodynamic arguments needed to connect those tools to its result. The research sources above retain their separate attribution roles.

@@ -6,21 +6,23 @@ The construction also has an ordinary-spin realization with four qubits per fine
 
 ## Principal result
 
-Fix the SSH parameter $m>1$ and a noise angle $0<\epsilon<\pi/2$. Each physical fine site has two fermionic orbitals; a coarse cell contains two fine sites. Let five consecutive coarse blocks be ordered $C_-B_-AB_+C_+$, each of length $L$. Write
+Fix the SSH parameter $`m>1`$ and a noise angle $`0<\epsilon<\pi/2`$. Each physical fine site has two fermionic orbitals; a coarse cell contains two fine sites. Let five consecutive coarse blocks be ordered $`C_-B_-AB_+C_+`$, each of length $`L`$. Write
 
-$$
+```math
+
 \kappa_\epsilon=
 \frac{\zeta(3)\sin^2\epsilon}{8(1+\cos^2\epsilon)}.
-$$
+```
 
 For both the fermionic output and its spin realization,
 
-$$
+```math
+
 I(A:C_-\cup C_+\mid B_-\cup B_+)
 =\frac{643\,\kappa_\epsilon}{450L^2}+o(L^{-2}).
-$$
+```
 
-The shielding width grows with $L$, so this positive algebraic tail is incompatible with an exponential bound having any fixed polynomial region-size prefactor. The initial state satisfies an exponential shielding bound. Each noise gate is at most $8\epsilon^2$ from the identity in the local diamond norm.
+The shielding width grows with $`L`$, so this positive algebraic tail is incompatible with an exponential bound having any fixed polynomial region-size prefactor. The initial state satisfies an exponential shielding bound. Each noise gate is at most $`8\epsilon^2`$ from the identity in the local diamond norm.
 
 | Question | Established answer | Authoritative account |
 |---|---|---|
@@ -30,7 +32,7 @@ The shielding width grows with $L$, so this positive algebraic tail is incompati
 | Does the result extend to ordinary spins? | Yes, with four qubits per fine site and a globally mixed input. | [Spin realization](science/spin-realization.md) |
 | Is there a continuous-time counterpart? | Yes, for a specified balanced local gain-and-loss generator. | [Continuous-time companion](science/continuous-time.md) |
 
-All entropies are in nats. The thermodynamic limit is taken before the large-region limit, with $m$ and the nonzero noise strength fixed.
+All entropies are in nats. The thermodynamic limit is taken before the large-region limit, with $`m`$ and the nonzero noise strength fixed.
 
 ## Why the construction works
 
@@ -60,7 +62,7 @@ The quick command checks independent covariance formulas, unitality, limiting ca
 
 ## Scope
 
-The noise retains a tuned dark momentum mode. No generic-noise or finite-temperature Gibbs-state instability is claimed. The pure gapped input belongs to the fermionic construction; the spin input has tracial auxiliaries and an extensively degenerate ground-space interpretation. Faithfulness is a statement about each finite region of an infinite-chain state, not a uniform lower bound on its spectrum. The coefficient is independent of fixed $m$, while approximation constants and crossover lengths may depend on it.
+The noise retains a tuned dark momentum mode. No generic-noise or finite-temperature Gibbs-state instability is claimed. The pure gapped input belongs to the fermionic construction; the spin input has tracial auxiliaries and an extensively degenerate ground-space interpretation. Faithfulness is a statement about each finite region of an infinite-chain state, not a uniform lower bound on its spectrum. The coefficient is independent of fixed $`m`$, while approximation constants and crossover lengths may depend on it.
 
 ## Purpose and contact
 

@@ -4,114 +4,124 @@ This note proves the locality statements used by the construction: exponential c
 
 All entropies use natural logarithms. For disjoint finite regions, write
 
-$$
-I_\rho(A:C\mid B)=S_\rho(AB)+S_\rho(BC)-S_\rho(B)-S_\rho(ABC).
-$$
+```math
 
-The chain is grouped into coarse cells whenever interval alignment matters. The local dimension is fixed: $d=4$ on a fine site and $d=16$ on a coarse cell of the fermionic construction. The initial CMI proposition can be applied directly on fine sites; changing to a fixed blocking changes only constants. The initial Hamiltonian is translation invariant by one fine site. The noisy reference and output are translation invariant by one coarse cell.
+I_\rho(A:C\mid B)=S_\rho(AB)+S_\rho(BC)-S_\rho(B)-S_\rho(ABC).
+```
+
+The chain is grouped into coarse cells whenever interval alignment matters. The local dimension is fixed: $`d=4`$ on a fine site and $`d=16`$ on a coarse cell of the fermionic construction. The initial CMI proposition can be applied directly on fine sites; changing to a fixed blocking changes only constants. The initial Hamiltonian is translation invariant by one fine site. The noisy reference and output are translation invariant by one coarse cell.
 
 ## Fermionic entropy conventions
 
-For fermions, $\rho_R$ is the state restricted to the CAR algebra of the modes in $R$, and $S_\rho(R)$ is the entropy of its finite matrix density operator. All states and unitaries used below are parity even. A reduced state of a parity-even state is again parity even.
+For fermions, $`\rho_R`$ is the state restricted to the CAR algebra of the modes in $`R`$, and $`S_\rho(R)`$ is the entropy of its finite matrix density operator. All states and unitaries used below are parity even. A reduced state of a parity-even state is again parity even.
 
-Here is the tensor-factor justification needed for strong subadditivity and continuity. For any fixed finite tripartition, order its modes with all modes of $A$ first, then $B$, then $C$, and perform the corresponding Jordan–Wigner identification with $\mathcal H_A\otimes\mathcal H_B\otimes\mathcal H_C$. Each of $A,B,C,AB,BC,ABC$ is an interval in this ordering. The strings preceding such an interval cancel in every even monomial supported in the interval. Odd expectations vanish in both the fermionic restriction and the corresponding spin marginal. Therefore the fermionic restricted density matrix and the ordinary tensor-factor marginal have the same matrix, up to the chosen internal ordering, for every region appearing in the CMI. The same identification preserves trace distance between two even states. These observations also appear explicitly in [Yi et al., Supplemental Sec. VIII](../references/README.md#yi), Eqs. (VIII.1)–(VIII.4).
+Here is the tensor-factor justification needed for strong subadditivity and continuity. For any fixed finite tripartition, order its modes with all modes of $`A`$ first, then $`B`$, then $`C`$, and perform the corresponding Jordan–Wigner identification with $`\mathcal H_A\otimes\mathcal H_B\otimes\mathcal H_C`$. Each of $`A,B,C,AB,BC,ABC`$ is an interval in this ordering. The strings preceding such an interval cancel in every even monomial supported in the interval. Odd expectations vanish in both the fermionic restriction and the corresponding spin marginal. Therefore the fermionic restricted density matrix and the ordinary tensor-factor marginal have the same matrix, up to the chosen internal ordering, for every region appearing in the CMI. The same identification preserves trace distance between two even states. These observations also appear explicitly in [Yi et al., Supplemental Sec. VIII](../references/README.md#yi), Eqs. (VIII.1)–(VIII.4).
 
 Consequently:
 
 - Strong subadditivity holds for these regional entropies, even when a physical region has several components.
 - The CMI chain rule holds, and discarding a subsystem of either endpoint cannot increase CMI.
-- A product of even unitaries supported separately in $A,B,C$ leaves the CMI invariant.
-- The usual conditional-entropy continuity estimate applies with $\dim\mathcal H_A=d^{|A|}$.
+- A product of even unitaries supported separately in $`A,B,C`$ leaves the CMI invariant.
+- The usual conditional-entropy continuity estimate applies with $`\dim\mathcal H_A=d^{|A|}`$.
 
 A different ordering can be used for each application of strong subadditivity: the entropy of a fixed CAR restriction is independent of its internal mode ordering. Thus all terms in a chain-rule identity still refer to the same regional entropy function. The proof does not identify arbitrary disconnected fermionic marginals with marginals obtained by taking an ordinary partial trace in one fixed, spatial Jordan–Wigner ordering.
 
 ## Continuity estimate
 
-Let $\rho$ and $\sigma$ be states on a finite tripartition and set
+Let $`\rho`$ and $`\sigma`$ be states on a finite tripartition and set
 
-$$
+```math
+
 \epsilon=\tfrac12\|\rho_{ABC}-\sigma_{ABC}\|_1\leq 1,
 \qquad
  g(\epsilon)=(1+\epsilon)h_2\!\left(\frac{\epsilon}{1+\epsilon}\right),
-$$
+```
 
-where $h_2(x)=-x\log x-(1-x)\log(1-x)$. Applying [Winter's conditional-entropy bound](../references/README.md#continuity), Lemma 2, to
+where $`h_2(x)=-x\log x-(1-x)\log(1-x)`$. Applying [Winter's conditional-entropy bound](../references/README.md#continuity), Lemma 2, to
 
-$$
+```math
+
 I(A:C\mid B)=S(A\mid B)-S(A\mid BC)
-$$
+```
 
 gives
 
-$$
+```math
+
 \big|I_\rho(A:C\mid B)-I_\sigma(A:C\mid B)\big|
 \leq 4\epsilon\log d_A+2g(\epsilon).
 \tag{1}
-$$
+```
 
-One may replace $d_A$ by $\min(d_A,d_C)$. In particular, the bound using $d_A$ is independent of the dimension of the exterior $C$. No lower bound on an eigenvalue of $\rho$ or $\sigma$ is required. We will use both $g(\epsilon)=O(\epsilon\log(1/\epsilon))$ as $\epsilon\downarrow0$ and the uniform bound $g(\epsilon)\leq C\sqrt\epsilon$ on $[0,1]$.
+One may replace $`d_A`$ by $`\min(d_A,d_C)`$. In particular, the bound using $`d_A`$ is independent of the dimension of the exterior $`C`$. No lower bound on an eigenvalue of $`\rho`$ or $`\sigma`$ is required. We will use both $`g(\epsilon)=O(\epsilon\log(1/\epsilon))`$ as $`\epsilon\downarrow0`$ and the uniform bound $`g(\epsilon)\leq C\sqrt\epsilon`$ on $`[0,1]`$.
 
 ## Infinite-volume dynamics and interaction norm
 
-The notation $\mathcal U(\rho)$ denotes the state obtained from the infinite-volume, finite-time automorphism generated by the dressing Hamiltonian. It does not require a global unitary in a particular infinite-volume Fock representation.
+The notation $`\mathcal U(\rho)`$ denotes the state obtained from the infinite-volume, finite-time automorphism generated by the dressing Hamiltonian. It does not require a global unitary in a particular infinite-volume Fock representation.
 
-For a quadratic generator with a fixed number $q$ of modes per cell, assume
+For a quadratic generator with a fixed number $`q`$ of modes per cell, assume
 
-$$
+```math
+
 K=\sum_{x,y}\sum_{\alpha,\beta=1}^{q}
  k_{x\alpha,y\beta}c^\dagger_{x\alpha}c_{y\beta},
 \qquad
  |k_{x\alpha,y\beta}|\leq J e^{-\mu|x-y|},
 \tag{2}
-$$
+```
 
-with $k=k^\dagger$. Evolution time is bounded by a fixed $T$. In the spatial Jordan–Wigner representation, each hopping term has interval support between its two endpoints and the same operator norm, up to a fixed convention-dependent constant. For any $0<\nu<\mu$, the resulting interval interaction $\Phi$ satisfies
+with $`k=k^\dagger`$. Evolution time is bounded by a fixed $`T`$. In the spatial Jordan–Wigner representation, each hopping term has interval support between its two endpoints and the same operator norm, up to a fixed convention-dependent constant. For any $`0<\nu<\mu`$, the resulting interval interaction $`\Phi`$ satisfies
 
-$$
+```math
+
 \|\Phi\|_{F_\nu}
 :=\sup_{x,y}\frac{\sum_{Z\ni x,y}\|\Phi(Z)\|}{F_\nu(|x-y|)}<\infty,
 \qquad
 F_\nu(r)=\frac{e^{-\nu r}}{(1+r)^2}.
 \tag{3}
-$$
+```
 
-Indeed, the sum of hopping norms over intervals containing both $x$ and $y$ is bounded by $C e^{-\mu|x-y|}$, and the slower exponential in $F_\nu$ absorbs the polynomial denominator. The function $F_\nu$ is summable and has a finite convolution constant. The Lieb–Robinson estimate and thermodynamic-limit construction therefore apply; see [Nachtergaele–Ogata–Sims, Theorems 2.1 and 2.2](../references/README.md#local-dynamics).
+Indeed, the sum of hopping norms over intervals containing both $`x`$ and $`y`$ is bounded by $`C e^{-\mu|x-y|}`$, and the slower exponential in $`F_\nu`$ absorbs the polynomial denominator. The function $`F_\nu`$ is summable and has a finite convolution constant. The Lieb–Robinson estimate and thermodynamic-limit construction therefore apply; see [Nachtergaele–Ogata–Sims, Theorems 2.1 and 2.2](../references/README.md#local-dynamics).
 
 The same reasoning applies to the spin realization whenever its dressing has this exponential interval-interaction norm. All the fermionic block evolutions and approximants below can be chosen even.
 
-For a finite interval $R$ and a larger interval $W$, the locality estimate has the form
+For a finite interval $`R`$ and a larger interval $`W`$, the locality estimate has the form
 
-$$
+```math
+
 \left\|\alpha_t(O_R)-\alpha_t^{W}(O_R)\right\|
 \leq C_T|R|e^{-a\,\operatorname{dist}(R,W^c)}\|O_R\|.
 \tag{4}
-$$
+```
 
 It is uniform in the state. Taking the supremum over norm-one observables yields the corresponding reduced-state trace-distance bound, including for inputs correlated with the exterior. For even fermionic state differences, it suffices to take even observables in this dual characterization.
 
 ## Initial exponential CMI
 
-**Proposition 1.** Let $\rho_0$ be a product of even states over the cells, with no purity assumption, and let $\rho=\mathcal U(\rho_0)$ for an exponentially local dressing as above. Let $A$ be a finite interval and let $B=B_-\cup B_+$ be its two adjacent shielding intervals. Put
+**Proposition 1.** Let $`\rho_0`$ be a product of even states over the cells, with no purity assumption, and let $`\rho=\mathcal U(\rho_0)`$ for an exponentially local dressing as above. Let $`A`$ be a finite interval and let $`B=B_-\cup B_+`$ be its two adjacent shielding intervals. Put
 
-$$
+```math
+
 b=\min(|B_-|,|B_+|).
-$$
+```
 
-For any finite exterior $C\subset(AB)^c$, there are constants $C_0,a_0>0$ and a fixed integer $p$ such that
+For any finite exterior $`C\subset(AB)^c`$, there are constants $`C_0,a_0>0`$ and a fixed integer $`p`$ such that
 
-$$
+```math
+
 I_\rho(A:C\mid B)
 \leq C_0(1+|A|)(1+|B|)^p e^{-a_0 b}.
 \tag{5}
-$$
+```
 
-The constants and polynomial are independent of $|C|$. The same bound holds for the increasing-exterior limit of the CMI.
+The constants and polynomial are independent of $`|C|`$. The same bound holds for the increasing-exterior limit of the CMI.
 
 ### Proof
 
-Work first in an arbitrary finite interval $\Lambda\supset AB$ and take the full exterior $C_\Lambda=\Lambda\setminus AB$. Use the locality decomposition in [Yi et al., Supplemental Theorem III.1](../references/README.md#yi). If $A_+$ and $C_+$ are strips in $B$ next to $A$ and $C_\Lambda$, respectively, each of width approximately $b/3$, it gives
+Work first in an arbitrary finite interval $`\Lambda\supset AB`$ and take the full exterior $`C_\Lambda=\Lambda\setminus AB`$. Use the locality decomposition in [Yi et al., Supplemental Theorem III.1](../references/README.md#yi). If $`A_+`$ and $`C_+`$ are strips in $`B`$ next to $`A`$ and $`C_\Lambda`$, respectively, each of width approximately $`b/3`$, it gives
 
-$$
+```math
+
 U_\Lambda\approx \widetilde U_\Lambda
 =U_B\big(U_{A_+}U_{C_+}\big)^\dagger
  U_{AA_+}U_{C_\Lambda C_+},
@@ -119,125 +129,134 @@ U_\Lambda\approx \widetilde U_\Lambda
 \|U_\Lambda-\widetilde U_\Lambda\|
 \leq C_T(1+|B|)^{p_0}e^{-a b}.
 \tag{6}
-$$
+```
 
-The block Hamiltonians are restrictions of the interval interaction. A disconnected block can have more than one component. The error is uniform in $\Lambda$, $|A|$, and $|C_\Lambda|$.
+The block Hamiltonians are restrictions of the interval interaction. A disconnected block can have more than one component. The error is uniform in $`\Lambda`$, $`|A|`$, and $`|C_\Lambda|`$.
 
 For clarity, the exponential assertion in (6) uses the displayed error functions in that theorem, rather than only its headline superpolynomial conclusion. Its Eq. (III.4) bounds the error by
 
-$$
+```math
+
 2|B||t|f^\delta(b/3)+2|B|^2|t|F_t(b/6).
 \tag{7}
-$$
+```
 
-Our generator admits a site-centered decomposition whose locality tail is $f(r)\leq C e^{-\mu_0 r}$. In Eqs. (III.5)–(III.11), $f^\delta$ and $f^\partial$ are polynomially weighted tails of $f$. Choose the reproducing function $h(r)=C'e^{-\mu_0\alpha r/2}(1+r)^{-\eta}$ with $0<\alpha<1$ and $\eta>1$. In the inner sum defining $\widetilde f_t(r)$, when $m\leq\operatorname{dist}(j,k)/2$ and $x\in B_m(j)$, one has $\operatorname{dist}(x,k)\geq\operatorname{dist}(j,k)/2$. This supplies an exponential bound for that part; the part with larger $m$ is a tail of $f$. The remaining sums in $\widetilde f_t$ and $F_t$ are again polynomially weighted exponential tails. Reducing the exponent if necessary, all these functions are bounded by $C_T e^{-a' r}$. This proves (6), with some fixed polynomial in $|B|$, uniformly in the exterior volume.
+Our generator admits a site-centered decomposition whose locality tail is $`f(r)\leq C e^{-\mu_0 r}`$. In Eqs. (III.5)–(III.11), $`f^\delta`$ and $`f^\partial`$ are polynomially weighted tails of $`f`$. Choose the reproducing function $`h(r)=C'e^{-\mu_0\alpha r/2}(1+r)^{-\eta}`$ with $`0<\alpha<1`$ and $`\eta>1`$. In the inner sum defining $`\widetilde f_t(r)`$, when $`m\leq\operatorname{dist}(j,k)/2`$ and $`x\in B_m(j)`$, one has $`\operatorname{dist}(x,k)\geq\operatorname{dist}(j,k)/2`$. This supplies an exponential bound for that part; the part with larger $`m`$ is a tail of $`f`$. The remaining sums in $`\widetilde f_t`$ and $`F_t`$ are again polynomially weighted exponential tails. Reducing the exponent if necessary, all these functions are bounded by $`C_T e^{-a' r}`$. This proves (6), with some fixed polynomial in $`|B|`$, uniformly in the exterior volume.
 
-Now apply $\widetilde U_\Lambda$ to the product state. The two rightmost unitaries act on disjoint regions $AA_+$ and $C_\Lambda C_+$, while the remaining sites are still in a product state. The resulting state has zero $I(A:C_\Lambda\mid B)$. The remaining factors in $\widetilde U_\Lambda$ are supported entirely in $B$, so they preserve this zero CMI. This argument works for mixed as well as pure product input.
+Now apply $`\widetilde U_\Lambda`$ to the product state. The two rightmost unitaries act on disjoint regions $`AA_+`$ and $`C_\Lambda C_+`$, while the remaining sites are still in a product state. The resulting state has zero $`I(A:C_\Lambda\mid B)`$. The remaining factors in $`\widetilde U_\Lambda`$ are supported entirely in $`B`$, so they preserve this zero CMI. This argument works for mixed as well as pure product input.
 
 Operator-norm closeness of two unitaries gives
 
-$$
+```math
+
 \tfrac12\|U_\Lambda\rho_{0,\Lambda}U_\Lambda^\dagger
  -\widetilde U_\Lambda\rho_{0,\Lambda}\widetilde U_\Lambda^\dagger\|_1
 \leq \|U_\Lambda-\widetilde U_\Lambda\|.
-$$
+```
 
-Use (1) with $\log d_A=|A|\log d$. If the right side of (6) is at most one, $g(\epsilon)\leq C\sqrt\epsilon$ gives (5), with a smaller positive exponential rate. If it exceeds one, the dimension bound $I(A:C\mid B)\leq2|A|\log d$ gives the same result after increasing the constant.
+Use (1) with $`\log d_A=|A|\log d`$. If the right side of (6) is at most one, $`g(\epsilon)\leq C\sqrt\epsilon`$ gives (5), with a smaller positive exponential rate. If it exceeds one, the dimension bound $`I(A:C\mid B)\leq2|A|\log d`$ gives the same result after increasing the constant.
 
-For any chosen finite $C$, endpoint monotonicity gives
+For any chosen finite $`C`$, endpoint monotonicity gives
 
-$$
+```math
+
 I_{\rho_\Lambda}(A:C\mid B)
 \leq I_{\rho_\Lambda}(A:C_\Lambda\mid B).
-$$
+```
 
-Let $\Lambda\uparrow\mathbb Z$ at fixed $A,B,C$. Local thermodynamic convergence and finite-dimensional entropy continuity prove (5) for the infinite-chain state. Finally, $I(A:C_n\mid B)$ is increasing and bounded by $2|A|\log d$ for an increasing exhaustion $C_n\uparrow(AB)^c$. Its limit exists and obeys (5). No infinite-entropy subtraction is used. $\square$
+Let $`\Lambda\uparrow\mathbb Z`$ at fixed $`A,B,C`$. Local thermodynamic convergence and finite-dimensional entropy continuity prove (5) for the infinite-chain state. Finally, $`I(A:C_n\mid B)`$ is increasing and bounded by $`2|A|\log d`$ for an increasing exhaustion $`C_n\uparrow(AB)^c`$. Its limit exists and obeys (5). No infinite-entropy subtraction is used. $`\square`$
 
 For the explicit SSH dressing in [the model construction](model-and-rank.md),
 
-$$
+```math
+
 \theta_m(k)=\sum_{r\geq1}\frac{(-1)^{r+1}}{r m^r}\sin(rk),
 \qquad m>1,
-$$
+```
 
-and the generator is $K(k)=-\theta_m(k)\sigma_z/2$, independently on the two parity chains. Thus (2) holds. Proposition 1 directly establishes the required initial Markov-length bound. It also applies to a product input with local maximally mixed ancillary degrees of freedom in the spin realization.
+and the generator is $`K(k)=-\theta_m(k)\sigma_z/2`$, independently on the two parity chains. Thus (2) holds. Proposition 1 directly establishes the required initial Markov-length bound. It also applies to a product input with local maximally mixed ancillary degrees of freedom in the spin realization.
 
 ## Circuit CMI comparison
 
-**Lemma 2.** Let $V=V_D\cdots V_1$ be a circuit whose gates in each layer are supported on disjoint intervals of at most $r$ cells. Consider either consecutive intervals $A,B,C$ or the shielded ordering $C_-\,B_-\,A\,B_+\,C_+$, with endpoint $C=C_-\cup C_+$. Suppose each intervening buffer has length greater than $2Dr$. There are enlarged endpoints $A'\supset A$ and $C'\supset C$, and the corresponding shrunken buffer $B'$, such that
+**Lemma 2.** Let $`V=V_D\cdots V_1`$ be a circuit whose gates in each layer are supported on disjoint intervals of at most $`r`$ cells. Consider either consecutive intervals $`A,B,C`$ or the shielded ordering $`C_-\,B_-\,A\,B_+\,C_+`$, with endpoint $`C=C_-\cup C_+`$. Suppose each intervening buffer has length greater than $`2Dr`$. There are enlarged endpoints $`A'\supset A`$ and $`C'\supset C`$, and the corresponding shrunken buffer $`B'`$, such that
 
-$$
+```math
+
 I_{V\rho V^\dagger}(A:C\mid B)
 \leq I_\rho(A':C'\mid B').
 \tag{8}
-$$
+```
 
-Each endpoint boundary moves by at most $Dr$; each connected buffer loses at most $2Dr$ cells. Outer endpoint boundaries may move into the exterior of the original observation interval. The statement holds for an arbitrary correlated input state.
+Each endpoint boundary moves by at most $`Dr`$; each connected buffer loses at most $`2Dr`$ cells. Outer endpoint boundaries may move into the exterior of the original observation interval. The statement holds for an arbitrary correlated input state.
 
 ### Proof
 
 For one layer, enlarge each endpoint to the complete gate blocks touching it. Since the buffers are sufficiently wide, no block meets both endpoints. The new boundaries align with the gate partition. Add any absorbed exterior registers to the endpoints and move absorbed buffer strips into the endpoints. Adding exterior registers uses endpoint monotonicity. Moving strips uses the identity
 
-$$
+```math
+
 \begin{aligned}
 I(Aa:Cc\mid B_0)
 ={}&I(a:c\mid B_0)+I(A:c\mid B_0a)\\
  &+I(a:C\mid B_0c)+I(A:C\mid B_0ac),
 \end{aligned}
 \tag{9}
-$$
+```
 
-so that $I(A:C\mid B_0ac)\leq I(Aa:Cc\mid B_0)$. All the omitted terms are nonnegative by strong subadditivity. The registers $a,c,B_0$ may each have several components; connectedness is not an entropy assumption.
+so that $`I(A:C\mid B_0ac)\leq I(Aa:Cc\mid B_0)`$. All the omitted terms are nonnegative by strong subadditivity. The registers $`a,c,B_0`$ may each have several components; connectedness is not an entropy assumption.
 
-The layer now acts as separate even unitaries on $A',B',C'$ and the exterior, hence leaves the enlarged CMI unchanged. Repeat backwards through the layers. Each enlargement moves a boundary by at most $r$ per layer. This proves (8). $\square$
+The layer now acts as separate even unitaries on $`A',B',C'`$ and the exterior, hence leaves the enlarged CMI unchanged. Repeat backwards through the layers. Each enlargement moves a boundary by at most $`r`$ per layer. This proves (8). $`\square`$
 
 The enlargement must follow complete gate blocks. An arbitrary fixed neighborhood can leave a gate crossing a newly chosen boundary. Also, keeping the outer endpoints fixed would omit gates coupling an endpoint to the exterior; no exterior-product assumption justifies omitting those gates here.
 
 ## Local circuit approximation
 
-**Lemma 3.** For a finite interval $R$ of length $N$ and every sufficiently large integer $\ell$, the fixed-time evolution in (2) has a depth-two interval circuit $V_{R,\ell}$, extended by the identity outside a padded finite window, with gate sizes at most $c_1\ell$, such that for every global state $\rho$,
+**Lemma 3.** For a finite interval $`R`$ of length $`N`$ and every sufficiently large integer $`\ell`$, the fixed-time evolution in (2) has a depth-two interval circuit $`V_{R,\ell}`$, extended by the identity outside a padded finite window, with gate sizes at most $`c_1\ell`$, such that for every global state $`\rho`$,
 
-$$
+```math
+
 \tfrac12\|[\mathcal U(\rho)]_R-[V_{R,\ell}\rho V_{R,\ell}^\dagger]_R\|_1
 \leq C_T(N+\ell)e^{-a\ell}.
 \tag{10}
-$$
+```
 
 For fermions the input is even and the gates can be chosen even. The inverse automorphism has the same property.
 
 ### Proof
 
-First choose a window $W$ containing a padding of order $\ell$ around $R$. Equation (4) bounds the error from replacing the infinite evolution by $U_W$ by $C_TN e^{-a\ell}$. This is a bound on the induced local evolution, so no condition is placed on correlations between $W$ and its exterior.
+First choose a window $`W`$ containing a padding of order $`\ell`$ around $`R`$. Equation (4) bounds the error from replacing the infinite evolution by $`U_W`$ by $`C_TN e^{-a\ell}`$. This is a bound on the induced local evolution, so no condition is placed on correlations between $`W`$ and its exterior.
 
-Partition $W$ into consecutive blocks of length between $8\ell$ and $16\ell$, adjusting end blocks if necessary. Let $K_0$ be the sum of interactions within individual blocks. Its evolution is one disjoint-block layer. Terms meeting more than two adjacent blocks have total norm at most $C|W|e^{-a\ell}$ and can first be discarded. Every remaining cross-block term is assigned to the unique cut it crosses. Denote the generator at cut $j$ by $Q_j$.
+Partition $`W`$ into consecutive blocks of length between $`8\ell`$ and $`16\ell`$, adjusting end blocks if necessary. Let $`K_0`$ be the sum of interactions within individual blocks. Its evolution is one disjoint-block layer. Terms meeting more than two adjacent blocks have total norm at most $`C|W|e^{-a\ell}`$ and can first be discarded. Every remaining cross-block term is assigned to the unique cut it crosses. Denote the generator at cut $`j`$ by $`Q_j`$.
 
-The norm of $Q_j$ is uniformly bounded. Its part extending more than $s$ cells from the cut has norm at most $Ce^{-a s}$. In the interaction picture of $K_0$, the same conclusion, with different constants, follows from the Lieb–Robinson estimate: truncate $Q_j$ first near the cut, evolve that truncated operator, and use the commutator estimate to localize its evolution. Thus the interaction-picture generator can be replaced by a generator $\widetilde Q_j(t)$ supported within $\ell$ cells of cut $j$, at a norm cost $C_Te^{-a\ell}$ per cut. Conditional expectation onto the strip gives such a localization and preserves parity.
+The norm of $`Q_j`$ is uniformly bounded. Its part extending more than $`s`$ cells from the cut has norm at most $`Ce^{-a s}`$. In the interaction picture of $`K_0`$, the same conclusion, with different constants, follows from the Lieb–Robinson estimate: truncate $`Q_j`$ first near the cut, evolve that truncated operator, and use the commutator estimate to localize its evolution. Thus the interaction-picture generator can be replaced by a generator $`\widetilde Q_j(t)`$ supported within $`\ell`$ cells of cut $`j`$, at a norm cost $`C_Te^{-a\ell}`$ per cut. Conditional expectation onto the strip gives such a localization and preserves parity.
 
-These strips are disjoint. The time-ordered evolution generated by $\sum_j\widetilde Q_j(t)$ therefore factorizes into a second layer of disjoint-strip unitaries. Duhamel's inequality bounds the difference between the exact and localized interaction-picture evolutions by the time integral of their generator-norm difference, at most $C_T|W|e^{-a\ell}$. Multiplying by the $K_0$ evolution gives a depth-two circuit with the claimed operator-norm accuracy on $W$. Together with the finite-window error, this proves (10). If $|W|$ is smaller than one prescribed block, use one gate on $W$ instead. $\square$
+These strips are disjoint. The time-ordered evolution generated by $`\sum_j\widetilde Q_j(t)`$ therefore factorizes into a second layer of disjoint-strip unitaries. Duhamel's inequality bounds the difference between the exact and localized interaction-picture evolutions by the time integral of their generator-norm difference, at most $`C_T|W|e^{-a\ell}`$. Multiplying by the $`K_0`$ evolution gives a depth-two circuit with the claimed operator-norm accuracy on $`W`$. Together with the finite-window error, this proves (10). If $`|W|`$ is smaller than one prescribed block, use one gate on $`W`$ instead. $`\square`$
 
 This is the one-dimensional block-and-boundary construction of [Osborne](../references/README.md#local-dynamics), with the exponentially small cross-cut tails included explicitly. Osborne's original nearest-neighbor statement alone is not being invoked as a theorem about arbitrarily long hoppings. The required long-range locality estimate is (3)–(4).
 
-For the quadratic interaction, the cross-cut tail bound used in this proof follows directly by summing $e^{-\mu|x-y|}$ over $x$ and $y$ on opposite sides of a cut. The same proof applies to its spin representation, whose hopping strings have interval support. More generally it applies to an even interval interaction with the displayed exponentially summable cross-cut tails.
+For the quadratic interaction, the cross-cut tail bound used in this proof follows directly by summing $`e^{-\mu|x-y|}`$ over $`x`$ and $`y`$ on opposite sides of a cut. The same proof applies to its spin representation, whose hopping strings have interval support. More generally it applies to an even interval interaction with the displayed exponentially summable cross-cut tails.
 
 ## Macroscopic CMI squeeze
 
-**Proposition 4.** Let $\sigma=\mathcal U(\tau)$, and let the reference state $\tau$ be translation invariant by one coarse cell. Suppose its entropy on any coarse-cell-aligned interval of $n$ cells satisfies
+**Proposition 4.** Let $`\sigma=\mathcal U(\tau)`$, and let the reference state $`\tau`$ be translation invariant by one coarse cell. Suppose its entropy on any coarse-cell-aligned interval of $`n`$ cells satisfies
 
-$$
+```math
+
 S_\tau(n)=s n+s_0-\frac{\kappa}{n^2}+O(n^{-3}).
 \tag{11}
-$$
+```
 
-For fixed positive $a,b,c$, take consecutive intervals of lengths $a_L=aL+O(1)$, $b_L=bL+O(1)$, $c_L=cL+O(1)$, with integer lengths and coarse-cell-aligned boundaries. Then
+For fixed positive $`a,b,c`$, take consecutive intervals of lengths $`a_L=aL+O(1)`$, $`b_L=bL+O(1)`$, $`c_L=cL+O(1)`$, with integer lengths and coarse-cell-aligned boundaries. Then
 
-$$
+```math
+
 I_\sigma(A_L:C_L\mid B_L)
 =\frac{\kappa}{L^2}
 \left[\frac1{b^2}+\frac1{(a+b+c)^2}
 -\frac1{(a+b)^2}-\frac1{(b+c)^2}\right]
 +O\!\left(\frac{\log L}{L^3}\right).
 \tag{12}
-$$
+```
 
 The conclusion concerns the CMI coefficient. It does not assert that each individual entropy correction is invariant under the dressing.
 
@@ -245,14 +264,16 @@ The conclusion concerns the CMI coefficient. It does not assert that each indivi
 
 Write the original half-open intervals as
 
-$$
+```math
+
 A=[0,a_L),\quad B=[a_L,a_L+b_L),\quad
 C=[a_L+b_L,a_L+b_L+c_L).
-$$
+```
 
-Choose $\ell_L=C\log L$ in Lemma 3, with $C$ large enough that the local trace error is $O(L^{-8})$, and choose an integer $R_L=O(\log L)$ at least as large as the total circuit boundary growth $D r$. For sufficiently large $L$, define
+Choose $`\ell_L=C\log L`$ in Lemma 3, with $`C`$ large enough that the local trace error is $`O(L^{-8})`$, and choose an integer $`R_L=O(\log L)`$ at least as large as the total circuit boundary growth $`D r`$. For sufficiently large $`L`$, define
 
-$$
+```math
+
 \begin{array}{lll}
  A^+=[-R_L,a_L+R_L),&
  B^-=[a_L+R_L,a_L+b_L-R_L),&
@@ -262,28 +283,31 @@ $$
  C^-=[a_L+b_L+R_L,a_L+b_L+c_L-R_L).
 \end{array}
 \tag{13}
-$$
+```
 
-Lemma 2, followed if needed by further endpoint enlargement, bounds the output CMI above by the reference CMI on $(A^+,B^-,C^+)$. For the reverse bound, approximate $\mathcal U^{-1}$ on the contracted reference triple $(A^-,B^+,C^-)$. Its circuit enlargement remains inside the original endpoints $A,C$, and its remaining buffer contains $B$. Applying (9) and endpoint monotonicity bounds its CMI by that of the original output triple. The continuity error in each direction is
+Lemma 2, followed if needed by further endpoint enlargement, bounds the output CMI above by the reference CMI on $`(A^+,B^-,C^+)`$. For the reverse bound, approximate $`\mathcal U^{-1}`$ on the contracted reference triple $`(A^-,B^+,C^-)`$. Its circuit enlargement remains inside the original endpoints $`A,C`$, and its remaining buffer contains $`B`$. Applying (9) and endpoint monotonicity bounds its CMI by that of the original output triple. The continuity error in each direction is
 
-$$
+```math
+
 \delta_L=O(L^{-8}\,L)+O(L^{-8}\log L)=O(L^{-7}).
-$$
+```
 
 Therefore
 
-$$
+```math
+
 I_\tau(A^-:C^-\mid B^+)-\delta_L
 \leq I_\sigma(A:C\mid B)
 \leq I_\tau(A^+:C^+\mid B^-)+\delta_L.
 \tag{14}
-$$
+```
 
-Both the inner and outer sides of each endpoint have been contracted in the lower comparison. Contracting only the sides adjacent to $B$ would not control the inverse circuit's coupling to the exterior.
+Both the inner and outer sides of each endpoint have been contracted in the lower comparison. Contracting only the sides adjacent to $`B`$ would not control the inverse circuit's coupling to the exterior.
 
-For the deterministic triples in (13), the two union lengths $|AB|=a_L+b_L$ and $|BC|=b_L+c_L$ do not change. The buffer length changes by $\mp2R_L$, and the full interval length changes by $\pm2R_L$. Translation invariance on coarse-cell-aligned intervals thus gives, exactly,
+For the deterministic triples in (13), the two union lengths $`|AB|=a_L+b_L`$ and $`|BC|=b_L+c_L`$ do not change. The buffer length changes by $`\mp2R_L`$, and the full interval length changes by $`\pm2R_L`$. Translation invariance on coarse-cell-aligned intervals thus gives, exactly,
 
-$$
+```math
+
 \begin{aligned}
 I_\tau(A^+:C^+\mid B^-)
  &=S_\tau(a_L+b_L)+S_\tau(b_L+c_L)
@@ -293,83 +317,90 @@ I_\tau(A^-:C^-\mid B^+)
    -S_\tau(b_L+2R_L)-S_\tau(a_L+b_L+c_L-2R_L).
 \end{aligned}
 \tag{15}
-$$
+```
 
-The volume and constant terms cancel in both lines. Substituting (11) and expanding the inverse squares gives the common leading term in (12); the boundary shifts cost $O(R_L/L^3)$. The remainder in (11) is uniform along these shifted lengths because all are bounded below by a fixed positive multiple of $L$. This proves (12). $\square$
+The volume and constant terms cancel in both lines. Substituting (11) and expanding the inverse squares gives the common leading term in (12); the boundary shifts cost $`O(R_L/L^3)`$. The remainder in (11) is uniform along these shifted lengths because all are bounded below by a fixed positive multiple of $`L`$. This proves (12). $`\square`$
 
 ### Finite-volume order of limits
 
-The proof uses the infinite-chain reference state and its local automorphism. Lemma 3 approximates that automorphism on an $O(L)$ observation interval without replacing the input by a state uncorrelated with its exterior. Equivalently, first take the finite-volume limit at each fixed $L$; all locality constants are uniform. A finite generator window with a padding $M_L$ adds at most $C L e^{-a M_L}$ in reduced-state trace distance. Taking $M_L=C'\log L$ sufficiently large makes its contribution to (1) smaller than $L^{-7}$. A separate approximation of the reference input by a periodic finite-volume state would require its own error estimate and is not an implicit step of this proof.
+The proof uses the infinite-chain reference state and its local automorphism. Lemma 3 approximates that automorphism on an $`O(L)`$ observation interval without replacing the input by a state uncorrelated with its exterior. Equivalently, first take the finite-volume limit at each fixed $`L`$; all locality constants are uniform. A finite generator window with a padding $`M_L`$ adds at most $`C L e^{-a M_L}`$ in reduced-state trace distance. Taking $`M_L=C'\log L`$ sufficiently large makes its contribution to (1) smaller than $`L^{-7}`$. A separate approximation of the reference input by a periodic finite-volume state would require its own error estimate and is not an implicit step of this proof.
 
 ### Coefficient for the noisy reference
 
 [Newsom–Levin, Eq. (15) and Appendix E](../references/README.md#nl), supply the scalar interval-entropy expansion. For the two-copy reference used here,
 
-$$
+```math
+
 \kappa=\gamma_\epsilon\zeta(3),
 \qquad
 \gamma_\epsilon=\frac{\sin^2\epsilon}{8(1+\cos^2\epsilon)}.
 \tag{16}
-$$
+```
 
-For $a=b=c=1$, (12) becomes
+For $`a=b=c=1`$, (12) becomes
 
-$$
+```math
+
 I_\sigma(A_L:C_L\mid B_L)
 =\frac{11\gamma_\epsilon\zeta(3)}{18L^2}
 +O\!\left(\frac{\log L}{L^3}\right).
 \tag{17}
-$$
+```
 
-All limits in this statement keep the nonzero noise angle and the SSH parameter fixed. The bounds are not asserted to be uniform in a joint limit $\epsilon\to0$ and $L\to\infty$.
+All limits in this statement keep the nonzero noise angle and the SSH parameter fixed. The bounds are not asserted to be uniform in a joint limit $`\epsilon\to0`$ and $`L\to\infty`$.
 
 ## Gaussian mutual information bound
 
 The following estimate covers finite regions with several components. It is a statement about the fermionic CAR restrictions, rather than about disconnected spin marginals in a fixed Jordan–Wigner ordering.
 
-**Lemma 5.** Let $\rho$ be a gauge-invariant Gaussian fermionic state. For two disjoint finite mode sets $E,F$, write its restricted covariance and its block-diagonal part as
+**Lemma 5.** Let $`\rho`$ be a gauge-invariant Gaussian fermionic state. For two disjoint finite mode sets $`E,F`$, write its restricted covariance and its block-diagonal part as
 
-$$
+```math
+
 G=\begin{pmatrix}G_E&X\\X^\dagger&G_F\end{pmatrix},
 \qquad D=G_E\oplus G_F,
 \qquad N=|E|+|F|,
 \qquad \Delta=\|G-D\|_1=2\|X\|_1.
-$$
+```
 
 Then
 
-$$
+```math
+
 I_\rho(E:F)
 \leq \Delta\log(2N-1)+N h_2(\Delta/N).
 \tag{18}
-$$
+```
 
-In particular, if the covariance entries obey $|G_{x\alpha,y\beta}|\leq C e^{-a|x-y|}$ and $E,F$ have a fixed number of interval components, separated by at least $b$, then $\Delta\leq C'e^{-a b}$. For families with $N=O(L)$ and $b\geq cL>0$,
+In particular, if the covariance entries obey $`|G_{x\alpha,y\beta}|\leq C e^{-a|x-y|}`$ and $`E,F`$ have a fixed number of interval components, separated by at least $`b`$, then $`\Delta\leq C'e^{-a b}`$. For families with $`N=O(L)`$ and $`b\geq cL>0`$,
 
-$$
+```math
+
 I_\rho(E:F)=O(\operatorname{poly}(L)e^{-a' L})
 \tag{19}
-$$
+```
 
-for some $a'>0$, without a lower spectral bound for $G$ or $1-G$.
+for some $`a'>0`$, without a lower spectral bound for $`G`$ or $`1-G`$.
 
 ### Proof
 
-A Gaussian restriction has entropy $S(G)=\operatorname{tr}h_2(G)$; diagonalizing its covariance gives independent one-mode occupations. See [Peschel](../references/README.md#gaussian-reductions) for the reduced-density-matrix construction. The even product of the restrictions to $E$ and $F$ is the Gaussian state with covariance $D$, so $I(E:F)=\operatorname{tr}h_2(D)-\operatorname{tr}h_2(G)$.
+A Gaussian restriction has entropy $`S(G)=\operatorname{tr}h_2(G)`$; diagonalizing its covariance gives independent one-mode occupations. See [Peschel](../references/README.md#gaussian-reductions) for the reduced-density-matrix construction. The even product of the restrictions to $`E`$ and $`F`$ is the Gaussian state with covariance $`D`$, so $`I(E:F)=\operatorname{tr}h_2(D)-\operatorname{tr}h_2(G)`$.
 
-Associate to any $N\times N$ positive contraction $Q$ the ordinary $2N$-dimensional density matrix
+Associate to any $`N\times N`$ positive contraction $`Q`$ the ordinary $`2N`$-dimensional density matrix
 
-$$
+```math
+
 \widehat Q=\frac1N\begin{pmatrix}Q&0\\0&1-Q\end{pmatrix}.
-$$
+```
 
-It has entropy $S(\widehat Q)=\log N+N^{-1}\operatorname{tr}h_2(Q)$. Moreover,
+It has entropy $`S(\widehat Q)=\log N+N^{-1}\operatorname{tr}h_2(Q)`$. Moreover,
 
-$$
+```math
+
 \tfrac12\|\widehat G-\widehat D\|_1=\Delta/N\leq1.
-$$
+```
 
-Applying [Audenaert's entropy continuity inequality](../references/README.md#continuity), Theorem 1, proves (18). For a pair of separated intervals, summing the exponential entry bound over both distances from their facing boundaries gives $\sum_{x\in E,y\in F}|X_{xy}|\leq C'e^{-ab}$. The trace norm is at most this entrywise sum. Sum over the fixed number of component pairs. Finally insert this estimate in (18), or use $h_2(u)\leq C\sqrt u$, to obtain (19). $\square$
+Applying [Audenaert's entropy continuity inequality](../references/README.md#continuity), Theorem 1, proves (18). For a pair of separated intervals, summing the exponential entry bound over both distances from their facing boundaries gives $`\sum_{x\in E,y\in F}|X_{xy}|\leq C'e^{-ab}`$. The trace norm is at most this entrywise sum. Sum over the fixed number of component pairs. Finally insert this estimate in (18), or use $`h_2(u)\leq C\sqrt u`$, to obtain (19). $`\square`$
 
 The output covariance in this construction has an analytic symbol in a fixed annulus around the unit circle: the reference noisy covariance has finite range and the SSH dressing is analytic. Its Fourier coefficients therefore satisfy the exponential entry bound required here. This is sufficient for the exponentially small mutual-information corrections in the fully shielded five-interval witness in [the instability theorem](instability-theorem.md).
 
@@ -377,7 +408,7 @@ The output covariance in this construction has an analytic symbol in a fixed ann
 
 These arguments establish an exponential initial CMI bound for the exact shielded geometry, including a bound independent of the exterior size, and transfer the exact leading macroscopic CMI coefficient under the specified exponentially local unitary. They do not rely on a local-rank deficiency, a lower local spectral bound, or purity of the product state before dressing. The circuit comparison also applies directly to a shielded witness, with both connected buffer widths reduced by at most the circuit boundary growth.
 
-The transfer lemma alone is not a claim that an arbitrary one-cell endpoint witness retains its original value or exponent after dressing: its endpoints can grow by $O(\log L)$. The macroscopic coefficient result avoids that issue by the two-sided deterministic comparison (14). General power-law interactions, unbounded on-site Hilbert spaces, and parity-odd operations are outside the stated assumptions.
+The transfer lemma alone is not a claim that an arbitrary one-cell endpoint witness retains its original value or exponent after dressing: its endpoints can grow by $`O(\log L)`$. The macroscopic coefficient result avoids that issue by the two-sided deterministic comparison (14). General power-law interactions, unbounded on-site Hilbert spaces, and parity-odd operations are outside the stated assumptions.
 
 ## Primary source locations
 
