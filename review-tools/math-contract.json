@@ -6,8 +6,8 @@
       "index": 5,
       "source_sha256": "b841a40f37ea00a981c9d19fffb1baad8fd6a0827a2cb646942abf06e4a8afd7",
       "required_text": [
-        "κ",
-        "ζ",
+        "\u03ba",
+        "\u03b6",
         "sin",
         "8",
         "cos"
@@ -20,27 +20,27 @@
       "required_text": [
         "643",
         "450",
-        "κ",
+        "\u03ba",
         "L",
-        "−2"
+        "\u22122"
       ]
     },
     {
       "path": "science/instability-theorem.md",
       "index": 36,
-      "source_sha256": "4040778d7de1d1a760d095bba6672a3a199b97593de82134d21ef450748111ad",
+      "source_sha256": "f5b5b3c23d4b5548cf886c6908ec0e8a160005a8503df8288e2d4858983bb8e4",
       "required_text": [
         "(T9)",
         "643",
         "450",
-        "κ",
-        "−2"
+        "\u03ba",
+        "\u22122"
       ]
     },
     {
       "path": "science/instability-theorem.md",
       "index": 100,
-      "source_sha256": "7d0280ef84bf241fbbd7fa7c4ca85b1225355a20092acd3703dde07115f5d935",
+      "source_sha256": "025ecab8f58a338636e341f84c53f170d5f8ad2ff2de3ba3a13abc56d1cfe414",
       "required_text": [
         "(T24)",
         "11",
@@ -54,29 +54,29 @@
     {
       "path": "science/instability-theorem.md",
       "index": 117,
-      "source_sha256": "67e45718190e1c72a02a8f929907f5f15c18b3cb360d85e4e3874d582f9906c3",
+      "source_sha256": "1c1edeba230271e8d370c68b1b063058f0df2a4da0338508de25762f01a4e9b3",
       "required_text": [
         "(T27)",
         "11",
         "144",
-        "ζ",
+        "\u03b6",
         "sin",
         "cos",
-        "−2"
+        "\u22122"
       ]
     },
     {
       "path": "science/instability-theorem.md",
       "index": 118,
-      "source_sha256": "cc4f64ac79644e5bf0e725efa317794beaa6b47afb9db2689116faa796627fdd",
+      "source_sha256": "f1ed6ce6cf239dd90622231013420ffb9b5da4a1e2777cde975dccf57c4c0b9f",
       "required_text": [
         "(T28)",
         "643",
         "3600",
-        "ζ",
+        "\u03b6",
         "sin",
         "cos",
-        "−2"
+        "\u22122"
       ]
     },
     {
@@ -87,9 +87,9 @@
         "X",
         "01",
         "=",
-        "−",
+        "\u2212",
         "sin",
-        "ε"
+        "\u03b5"
       ]
     },
     {
@@ -109,10 +109,25 @@
         "S",
         "p",
         "=",
-        "σ",
+        "\u03c3",
         "x",
-        "⊗",
+        "\u2297",
         "orbital"
+      ]
+    },
+    {
+      "path": "science/locality-and-cmi.md",
+      "index": 179,
+      "source_sha256": "0da8f29174382fb6fa556e81a0b2d3cc70c9ca8a525c825d25d8cbb08783d0ea",
+      "required_text": [
+        "(13)",
+        "A",
+        "B",
+        "C",
+        "R",
+        "a",
+        "b",
+        "c"
       ]
     }
   ]
