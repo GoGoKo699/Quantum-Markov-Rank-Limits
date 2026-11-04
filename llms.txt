@@ -1,0 +1,28 @@
+# Quantum Markov Rank Limits
+
+An explicit separation between full-rank finite marginals and stability of quantum Markov length under weak strictly local noise.
+
+## Scientific route
+
+- README.md: question, principal result, scope, reproduction entrypoint, and contact.
+- science/README.md: connected scientific route and claim-to-evidence map.
+- science/model-and-rank.md: finite-range gapped Hamiltonian, covariance conventions, local faithfulness, physical ancilla dilation, unitality, local diamond bound, and compatible dressing.
+- science/locality-and-cmi.md: even-CAR entropy conventions, initial exponential shielding bound, local circuit approximation, forward/inverse CMI squeeze, and separated-region Gaussian mutual information.
+- science/instability-theorem.md: exact theorem, inherited scalar entropy expansion, one-sided coefficient, fully shielded coefficient, normalization, and order of limits.
+- science/spin-realization.md: explicit local Pauli gates, tracial-auxiliary embedding, spin faithfulness, mixed input, and direct spin shielding argument.
+- science/continuous-time.md: balanced Lindblad generator, damping normalization, faithfulness, and algebraic coefficients.
+- science/interpretation.md: local rank versus near-pure modes, resource accounting, thermal comparison, and limits of the conclusion.
+
+## Sources and computation
+
+- references/README.md: related work, inherited ingredients, and boundaries of the literature comparison.
+- references/references.bib: structured bibliography.
+- verification/README.md: executable commands, environment, checks, and what computation cannot prove.
+- verification/requirements.txt: pinned numerical dependencies.
+- code/reproduce.py: covariance checks and finite-size entropy reproduction.
+- data/README.md: data conventions, representative values, numerical limitations, and Fourier-convention equivalence.
+- data/results.json: completed finite-size calculations and recorded residuals.
+
+## Essential distinctions
+
+The fermionic input is pure and gapped; the ordinary-spin input is globally mixed. Every finite reduction is faithful, but there is no uniform occupation margin as region size grows. The physical finite-depth noise stays nearest neighbor; the analytical dressing is exponentially local. The scalar entropy asymptotic and noise mechanism are inherited from Newsom–Levin, and the auxiliary spin embedding follows Negari–Zou–Hsieh. The project does not claim generic-noise or positive-temperature Gibbs-state instability. Entropies are in nats, and thermodynamic limits precede large-region asymptotics.
