@@ -33,13 +33,14 @@ These pages form one connected account. The model and locality notes are the aut
 
 For finite disjoint regions,
 
-$$
+```math
+
 I(A:C\mid B)=S(AB)+S(BC)-S(B)-S(ABC).
-$$
+```
 
-The finite-depth construction has two physical fermionic modes per fine site and four per coarse cell. Its spin realization adds one tracial auxiliary per physical mode, giving four qubits per fine site. The continuous-time companion instead uses two physical modes per cell. Each page states its length convention explicitly. Natural logarithms are used throughout; dividing by $\log 2$ converts entropy and CMI to bits.
+The finite-depth construction has two physical fermionic modes per fine site and four per coarse cell. Its spin realization adds one tracial auxiliary per physical mode, giving four qubits per fine site. The continuous-time companion instead uses two physical modes per cell. Each page states its length convention explicitly. Natural logarithms are used throughout; dividing by $`\log 2`$ converts entropy and CMI to bits.
 
-The infinite-chain state is defined before taking region sizes to infinity. Noise strength and $m>1$ are fixed in those asymptotics. No global trace-norm convergence of infinite many-body states is assumed.
+The infinite-chain state is defined before taking region sizes to infinity. Noise strength and $`m>1`$ are fixed in those asymptotics. No global trace-norm convergence of infinite many-body states is assumed.
 
 ## Sources and reproduction
 
